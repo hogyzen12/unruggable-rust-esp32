@@ -36,7 +36,7 @@ The ESP32 acts as a secure element that never exposes the private key, requiring
 
 1. Install the Rust toolchain for ESP32:
 ```bash
-cargo install espup
+cargo install espup --locked
 espup install
 . $HOME/export-esp.sh
 ```
@@ -45,6 +45,7 @@ espup install
 ```bash
 cd esp32-solana-signer
 cargo +esp build
+cargo install espflash --locked
 espflash flash target/xtensa-esp32-espidf/debug/esp32-solana-signer --port /dev/tty.usbserial-0001
 ```
 

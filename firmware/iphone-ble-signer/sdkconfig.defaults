@@ -1,0 +1,32 @@
+# The main task only orchestrates SE050 + UI; the FN-DSA worker gets its own stack.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=65536
+
+# The connected demo device currently boots as a 4 MB flash target.
+# Keep the image header and partition layout aligned to what the ROM accepts.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_HEADER_FLASHSIZE_UPDATE=y
+
+# Firmware has outgrown the built-in 1500K app slot; use a custom 4 MB layout.
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="../../../../../../partitions/unified_wallet_4mb.csv"
+CONFIG_PARTITION_TABLE_FILENAME="../../../../../../partitions/unified_wallet_4mb.csv"
+
+# Use this to set FreeRTOS kernel tick frequency to 1000 Hz (100 Hz by default).
+# This allows to use 1 ms granularity for thread sleeps (10 ms by default).
+#CONFIG_FREERTOS_HZ=1000
+
+# Workaround for https://github.com/espressif/esp-idf/issues/7631
+#CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=n
+#CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=n
+
+# BLE GATT proof firmware for iPhone pairing.
+CONFIG_BT_ENABLED=y
+CONFIG_BT_BLUEDROID_ENABLED=y
+CONFIG_BT_CLASSIC_ENABLED=n
+CONFIG_BTDM_CTRL_MODE_BLE_ONLY=y
+CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY=n
+CONFIG_BTDM_CTRL_MODE_BTDM=n
+CONFIG_BT_BLE_42_FEATURES_SUPPORTED=y
+CONFIG_BT_BLE_50_FEATURES_SUPPORTED=n
+CONFIG_BT_BTC_TASK_STACK_SIZE=15000
+CONFIG_BT_BLE_DYNAMIC_ENV_MEMORY=y

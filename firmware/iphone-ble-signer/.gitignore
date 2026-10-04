@@ -1,0 +1,13 @@
+/.vscode
+/.embuild
+/target
+/twofa
+__pycache__/
+.DS_Store
+/tools/hybrid-harness/target
+/tools/hybrid-harness/Cargo.lock
+/tools/vector-falcon-interop/target
+/tools/vector-falcon-interop/Cargo.lock
+/tools/vector-device-harness/target
+/tools/vector-device-harness/Cargo.lock
+/.localnet

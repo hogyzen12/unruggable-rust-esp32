@@ -1,0 +1,18 @@
+[package]
+name = "firmware-host-tests"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+anyhow = "1"
+zeroize = { version = "1.8", features = ["derive"] }
+aes-gcm = "0.10"
+pbkdf2 = "0.12"
+sha2 = "0.10"
+bs58 = "0.5"
+embedded-graphics = "0.8"
+embedded-hal = "1"
+st7735-lcd = { path = "../../firmware/iphone-ble-signer/vendor/st7735-lcd" }
+
+[workspace]

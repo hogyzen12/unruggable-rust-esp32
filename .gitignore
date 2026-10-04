@@ -17,3 +17,13 @@ folders.txt
 
 /twofa/totp-setup.svg
 /twofa/target
+# MLH release development outputs and private station records
+/dist/
+/factory-records/
+**/target/
+**/__pycache__/
+.DS_Store
+.env
+.env.*
+!/firmware/iphone-ble-signer/Cargo.lock
+!/tools/firmware-host-tests/Cargo.lock

@@ -1,178 +1,161 @@
-# ESP32 Solana Hardware Signer
+# MLH batch — Unruggable firmware v0.3.3
 
-![ESP32 Signer](https://github.com/hogyzen12/unruggable-rust-esp32/blob/master/icon.png)
+This is the firmware shipped on the 2026 MLH batch. The release preserves the
+original v0.3.3 binaries and their matching source; it is an archival release,
+not a new firmware update for those devices.
 
+| Identity | Value |
+| --- | --- |
+| Firmware | `0.3.3` |
+| Build reported by the board | `v2-ff212385a4d13c18` |
+| Git tag | `firmware-v0.3.3-mlh-2026` |
+| Manifest SHA-256 | `10670a2ee95aa947c6ca6ac328fefd7502d621d8ea9b5b7b1fe610063fe1efe9` |
+| Board | Unruggable V2, ESP32-S3 with SE050 and Tropic |
+| Partition layout | Qualified 4 MB layout, including on the batch's 8 MB chips |
 
-A hardware-based approach to secure Solana transaction signing using an ESP32 microcontroller. This project aims to provide an affordable yet secure alternative to expensive hardware wallets for signing Solana blockchain transactions.
+Download the original firmware package and its checksums from the
+[MLH GitHub release](https://github.com/hogyzen12/unruggable-rust-esp32/releases/tag/firmware-v0.3.3-mlh-2026).
+The maintained MLH source is **`firmware/iphone-ble-signer/`**. The older
+`esp32-solana-signer/` directory in the public repository is historical and is
+not the source for this batch.
 
-## Overview
+## Capabilities and owner behavior
 
-This project consists of two main components:
+- Solana Ed25519 signing through Tropic, with SE050-backed six-digit PIN
+  protection and physical approval of signing requests.
+- Desktop USB-C serial and authenticated, bonded iPhone Bluetooth transport.
+- Session locking on disconnect/expiry and USB host/reader loss. The USB
+  application-loss behavior was physically qualified on macOS; an application
+  hang that leaves the OS reader active is outside that detection.
+- On-device PIN unlock, Receive address/QR, Lock, Forget phones and Device info.
+  The full factory MAC and firmware version are available in Device info.
+- Transaction review derived from the message bytes. Supported Send requests
+  use the feature screen, amount/recipient and checklist. The exact recognised
+  three-instruction app marker bundle is summarised in one checklist entry.
+- Unknown transaction effects are explicitly labelled NOT DECODED, with a
+  request hash and warning checklist. Tap through, then hold SIGN for two
+  seconds; REJECT and REVIEW AGAIN are available on the final checklist.
+- Ten failed PIN attempts permanently lock the wallet. This release has no
+  PIN change, reset, recovery or seed export. Forget phones changes Bluetooth
+  pairings only. iOS may also need its stale pairing removed in Settings.
+- Terminal reflashing remains supported. Reflashing does not reset PIN
+  attempts or restore access to a locked-out wallet. ESP32 secure boot and
+  flash-encryption fuses were not enabled for this open-hardware batch.
 
-1. **ESP32 Firmware**: Rust-based firmware for the ESP32 that securely generates and stores a Solana keypair, allowing signing operations only when physically triggered by pressing the BOOT button.
-2. **Host Applications**: Programs to interface with the ESP32 hardware signer, implemented in Rust, Go, and JavaScript.
+Falcon/PQC and expanded stake/swap/Squads clear signing are outside this release.
+Artwork identifying a transaction category does not mean its effects were fully
+decoded; the displayed NOT DECODED warning remains authoritative.
 
-The ESP32 acts as a secure element that never exposes the private key, requiring physical interaction (button press) to authorize transaction signing.
+## Verify the checked-out source
 
-## How It Works
+From the repository root at the release tag:
 
-1. On first boot, the ESP32 generates a new Ed25519 keypair and stores it securely in non-volatile storage
-2. When connected to a host computer, it responds to simple serial commands:
-   - `GET_PUBKEY`: Returns the public key for creating transactions
-   - Base64-encoded message: Triggers the signing process (requires button press)
-3. For each signing request, the ESP32 waits for a physical button press on GPIO0 (BOOT button)
-4. After pressing the button, the message is signed with the private key and returned as a Base64-encoded signature
-5. The host computer then attaches this signature to the transaction and submits it to the Solana network
-
-## Hardware Requirements
-
-- ESP32 Development Board (any variant with the BOOT button on GPIO0)
-- USB-C cable (or appropriate cable for your ESP32 board)
-- Computer for running the host application
-
-## Quick Start
-
-### Setting Up the ESP32
-
-1. Install the Rust toolchain for ESP32:
-```bash
-cargo install espup
-espup install
-. $HOME/export-esp.sh
+```sh
+python3 releases/mlh-2026/verify.py
 ```
 
-2. Flash the firmware to your ESP32:
-```bash
-cd esp32-solana-signer
-cargo +esp build
-espflash flash target/xtensa-esp32-espidf/debug/esp32-solana-signer --port /dev/tty.usbserial-0001
+This verifies the pinned manifest and every one of its 78 source files, including
+the original file paths and content-derived build identity. Current MLH release
+documentation lives here, outside that frozen source snapshot; some older
+READMEs inside the snapshot describe historical firmware.
+
+## Use the original firmware package
+
+Download `unruggable-mlh-firmware-v0.3.3.tar.gz` and its `.sha256` file into the
+same directory. On macOS, check and extract it with:
+
+```sh
+shasum -a 256 -c unruggable-mlh-firmware-v0.3.3.tar.gz.sha256
+tar -xzf unruggable-mlh-firmware-v0.3.3.tar.gz
+cd unruggable-mlh-firmware-v0.3.3
+shasum -a 256 -c SHA256SUMS
+python3 firmware/factory.py verify
 ```
 
-3. Optionally, monitor the ESP32 output:
-```bash
-sudo espflash monitor --port /dev/tty.usbserial-0001
+The archive contains the original manifest, signer and diagnostic ELF/app
+binaries, bootloader, partition table, generated SDK configuration, factory tool
+and source archive. It does not contain customer manufacturing records.
+
+The manifest retains its original `candidate` and dirty-source provenance.
+The subsequent qualification and shipment are recorded by this release;
+rewriting the original manifest would invalidate its identity. Consequently
+the preserved flashing tool still requires `--allow-candidate`.
+
+### Existing wallet: preserve owner state
+
+Use **espflash 3.3.0**, Python 3 and **pyserial 3.5**, a USB data cable and one
+board. Close apps/serial monitors and disconnect the phone from the wallet.
+Replace the sample port and MAC below with the actual values from your board:
+
+```sh
+python3 firmware/factory.py flash --port /dev/cu.usbmodemXXXX \
+  --expect-mac AA:BB:CC:DD:EE:FF --records ../owner-update-records --allow-candidate
+python3 firmware/factory.py check --port /dev/cu.usbmodemXXXX \
+  --records ../owner-update-records --allow-candidate
 ```
 
-Note: Replace `/dev/tty.usbserial-0001` with the appropriate port for your system (e.g., `COM3` on Windows, `/dev/ttyUSB0` on Linux).
+Use the appropriate COM port on Windows or serial-device path on Linux.
+`flash` updates the firmware while preserving NVS and secure-element state.
+`check` reads status and locks the wallet. Do not use a whole-flash erase or
+merge padded binaries across NVS. Shipped MLH v0.3.3 boards already have this
+firmware and need no reflash to use this release.
 
-### Using the Signer
+### New blank boards: factory diagnostics and signer
 
-Once the firmware is flashed, the ESP32 will automatically generate a new Solana keypair on first boot, or load an existing one from NVS on subsequent boots.
+The factory command is for blank recipient boards. It flashes diagnostics,
+requires display inspection and a short button press/release, flashes the
+signer, checks the matching MAC/build and blank wallet state, and saves a record.
 
-#### Signing a Transaction
-
-1. Connect the ESP32 to your computer via USB
-2. Run one of the host applications to prepare an unsigned transaction:
-```bash
-cd solana-transaction-builder/rust/solana-tx-signer
-cargo run
+```sh
+python3 firmware/factory.py run --port /dev/cu.usbmodemXXXX \
+  --records ../factory-records --allow-candidate
 ```
 
-3. When the transaction is sent to the ESP32, press the BOOT button on the ESP32 to confirm and sign the transaction
-4. The host application will automatically receive the signature and submit the transaction to the Solana network
+Wait for the final `PASS <MAC>` and saved record, not just `PCB PASS`. No customer
+PIN, wallet key or phone bond is created at the station. A board used for owner
+setup cannot be reset into a blank recipient unit.
 
-Example terminal output:
-```
-Requested public key from ESP32
-Received ESP32 public key: Hy5oibb1cYdmjyPJ2fiypDtKYvp1uZTuPkmFzVy7TL8c
-Serialized Transaction Message (Base64): AQABA/wY8x7qf58iGUmJZzXONjNNWRtNNqfjrli/woXCfZRVV2dG9oKhrxsZn8/dvHHvGs4pjwdyafMunVJIIbimOMkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPi+WpxhpGeo6pYuD//BusKy41SfzTiQcaVatG99p/y7AQICAAEMAgAAAEBCDwAAAAAA
-Sent to ESP32: AQABA/wY8x7qf58iGUmJZzXONjNNWRtNNqfjrli/woXCfZRVV2dG9oKhrxsZn8/dvHHvGs4pjwdyafMunVJIIbimOMkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPi+WpxhpGeo6pYuD//BusKy41SfzTiQcaVatG99p/y7AQICAAEMAgAAAEBCDwAAAAAA
-Received from ESP32: J2j/MgmB8EMw4z5JUSd17Kc5wYRxqREUf+1YQUyEqPduJlet7Iihz5zw7n1fiawWZfYixKkKLkeMVkaHEjR4Cw==
-Transaction submitted with ID: nhcaMcizWGhRy9BxZ1yQ15pmp6gAYJKzkDkodn5XMAuKwmzDjqg6i3GKSETgZbdga3FirpGF9Z9MNbNDV7MMqPp
-```
+## Build and test
 
-## Protocol Description
+The build host needs the Espressif Xtensa Rust toolchain named `esp`, `ldproxy`,
+the ESP-IDF build prerequisites and espflash **3.3.0**. Load that toolchain's
+environment (for example `source ~/export-esp.sh`). ESP-IDF is pinned to **5.2.3**;
+the original manifest records the exact compiler version. Development rebuilds
+do not replace the archived binary hashes.
 
-The ESP32 hardware signer communicates via a simple serial protocol:
+From the repository root:
 
-| Command | Description | Response |
-|---------|-------------|----------|
-| `GET_PUBKEY` | Request the public key | Base58-encoded public key string |
-| `<base64_message>` | Request to sign a message (transaction) | Base64-encoded signature (after button press) |
-
-## Implementation Details
-
-### ESP32 Firmware (Rust)
-
-The ESP32 firmware is built using the Rust programming language with the `esp-idf-svc` framework. Key features include:
-
-- Ed25519 key generation and storage in NVS
-- Simple UART-based communication protocol
-- Button input handling for physical confirmation
-- Non-blocking operation
-
-### Host Applications
-
-#### Rust Implementation
-
-The Rust implementation uses the Solana SDK to create transactions and communicate with the ESP32 via serial port.
-
-#### Go Implementation
-
-The Go implementation uses the `gagliardetto/solana-go` library for Solana interaction and the `tarm/serial` package for ESP32 communication.
-
-#### JavaScript Implementation
-
-A simple JavaScript utility to create and serialize an unsigned Solana transaction for signing by the ESP32.
-
-## Project Structure
-
-```
-.
-├── esp32-solana-signer       # ESP32 firmware (Rust)
-│   ├── Cargo.lock
-│   ├── Cargo.toml
-│   ├── build.rs
-│   ├── rust-toolchain.toml   # Specifies the ESP32 Rust toolchain
-│   └── src
-│       └── main.rs           # Main firmware code
-└── solana-transaction-builder # Host applications
-    ├── go                     # Go implementation
-    │   ├── go.mod
-    │   ├── go.sum
-    │   └── signer.go         # Go client for ESP32 communication
-    ├── js                     # JavaScript implementation
-    │   ├── make_unsigned_tx_b64.js
-    │   ├── package-lock.json
-    │   └── package.json
-    └── rust                   # Rust implementation
-        └── solana-tx-signer
-            ├── Cargo.lock
-            ├── Cargo.toml
-            └── src
-                └── main.rs    # Rust client for ESP32 communication
+```sh
+python3 releases/mlh-2026/verify.py
+cargo test --locked --manifest-path tools/firmware-host-tests/Cargo.toml
+python3 -m unittest discover -s tools/firmware-production -v
+python3 -m unittest discover -s tools/firmware-lot -v
+python3 tools/firmware-production/package.py --output dist/firmware/my-build
 ```
 
-## Limitations & Future Work
+The packager builds both signer and diagnostics with locked dependencies and
+creates a new package directory. It refuses source changes during the build.
+Changed source produces a different content-derived build ID and needs its own
+qualification; do not relabel a new build with the MLH release tag.
 
-- Currently supports only basic transfer transactions
-- No display for transaction review (future enhancement)
-- Limited to one keypair per device
-- Future plans:
-  - Add OLED display support for transaction details
-  - Support for multiple accounts
-  - Hardware security enhancements (secure boot, etc.)
-  - Additional transaction types
-  - Improve button press handling for a smoother user experience
+## Qualification and provenance
 
-## Troubleshooting
+Recorded v0.3.3 acceptance includes both desktop USB adapters, iPhone Bluetooth
+signing/reconnect, local PIN, Receive/lock, marked Send, simplified blind review,
+explicit rejection and the new-unit factory procedure. Automated qualification
+recorded 80 host tests, two display tests, 25 clear-signing tests, 27 compatibility
+tests, ten factory tests and eight lot-report tests.
 
-### Button Press Timing
-The current implementation requires the BOOT button to be pressed while the ESP32 is waiting for input after receiving a transaction. The firmware waits for the button press before signing, so you don't need to time it precisely with sending the transaction.
+The spare's normal first setup/cold restart passed on v0.3.2 before the v0.3.3
+review-only change. Its planned setup power interruption was missed and is not
+claimed as tested on that spare. Earlier interruption/fault-injection evidence
+remains the baseline. The firmware is not represented as independently audited.
 
-### Serial Connection Issues
-If you have trouble with serial connections:
-- Ensure you're using the correct port name (check in Device Manager on Windows, `ls /dev/tty.*` on macOS, or `ls /dev/ttyUSB*` on Linux)
-- Try unplugging and reconnecting the ESP32
-- Make sure you have the correct USB drivers installed - ldport
-- Check that no other program is using the serial port
+Manufacturing records contain 223 distinct latest PASS boards and ten failed
+boards kept separately. The operator reported shipment; the exact selected
+200 recipient MACs were not recorded. Per-board records remain in the private
+manufacturing backup.
 
-### Build Issues
-If you encounter build issues:
-- Make sure you've sourced the ESP environment: `. $HOME/export-esp.sh`
-- Verify that the ESP-IDF toolchain is properly installed
-- Try running with the specific toolchain: `cargo +esp build`
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+The MLH source tag and release package identify the same shipped firmware in
+the public firmware repository and the private new-app monorepo. Their Git
+commit IDs differ; the original source/manifest/binary hashes establish alignment.

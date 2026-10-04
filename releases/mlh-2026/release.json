@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "release": "MLH batch \u2014 firmware v0.3.3",
+  "firmware_version": "0.3.3",
+  "tag": "firmware-v0.3.3-mlh-2026",
+  "build_id": "v2-ff212385a4d13c18",
+  "manifest_sha256": "10670a2ee95aa947c6ca6ac328fefd7502d621d8ea9b5b7b1fe610063fe1efe9",
+  "source_sha256": "ff212385a4d13c18d7df2a6b87f18709f0d964280cc91332f75d5fab02ed443a",
+  "as_shipped": true,
+  "publication_date": "2026-10-04",
+  "shipment_reported_by_operator": "2026-10-04",
+  "public_repository": "https://github.com/hogyzen12/unruggable-rust-esp32",
+  "public_release_url": "https://github.com/hogyzen12/unruggable-rust-esp32/releases/tag/firmware-v0.3.3-mlh-2026",
+  "original_build_git_revision": "98bb530f71520211fc8b09fa76ff53381d55c864",
+  "original_manifest_status": "candidate",
+  "original_source_dirty": true,
+  "original_handoff_sha256": "3f2eb2e92b7ccc176898721b54eb58a92e929d7107c96b79d2ea638b0b76b1ed",
+  "batch": {
+    "target": 200,
+    "latest_pass": 223,
+    "latest_fail": 10,
+    "failed_boards_separate_operator_confirmed": true,
+    "selected_recipient_macs_recorded": false
+  },
+  "provenance_note": "Original manifest and firmware artifacts are unchanged; release commit identities are resolved by the annotated tags and publication evidence."
+}

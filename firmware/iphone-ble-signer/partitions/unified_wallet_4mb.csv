@@ -1,0 +1,7 @@
+# Unified wallet on the currently connected ESP32-S3 demo device.
+# The hardware/bootloader combination is reporting a 4 MB flash geometry at
+# boot, so keep the standard low partitions and use the rest for the factory app.
+# Name,   Type, SubType, Offset,   Size,      Flags
+nvs,      data, nvs,     0x9000,   0x6000,
+phy_init, data, phy,     0xf000,   0x1000,
+factory,  app,  factory, 0x10000,  0x3f0000,

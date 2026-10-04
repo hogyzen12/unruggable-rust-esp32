@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "build_id": "v2-ff212385a4d13c18",
+  "board": "dual-element-se050",
+  "chip": "esp32s3",
+  "status": "candidate",
+  "source_dirty": true,
+  "qualification_commands": false,
+  "release_blockers": [
+    "Chip-enforced theft protection and permanent PIN lockout qualification required",
+    "Full app, new-unit station and interrupted-setup qualification required"
+  ],
+  "git_revision": "98bb530f71520211fc8b09fa76ff53381d55c864",
+  "source_sha256": "ff212385a4d13c18d7df2a6b87f18709f0d964280cc91332f75d5fab02ed443a",
+  "source_files": {
+    "firmware/iphone-ble-signer/.cargo/config.toml": "352ca204f840cdbbea540a5e6fb6c3944eb6a2218eb69027390addba1dc5e810",
+    "firmware/iphone-ble-signer/.gitignore": "1af3258fcccfcd17959051035727ba1a1a031d3a0ff278bc271588ea0e259afa",
+    "firmware/iphone-ble-signer/Cargo.lock": "0d2b2195fa4b81a1474059137afea65766cc3f08d1b6c6d54799aa7298794ab8",
+    "firmware/iphone-ble-signer/Cargo.toml": "7f04f579561a06666c7a3f71ac8e3280cea0f908d7c37ef553fd5ceb2f6da770",
+    "firmware/iphone-ble-signer/README.md": "4c60712ddada15a6bb6944f5b80b424d2db52a4854452825978af9da71f7e1bd",
+    "firmware/iphone-ble-signer/UPSTREAM-README.md": "f5f406bfd40b0b4c29e0106e20cb0058751de933989ce0d22d07d4b2daf2c494",
+    "firmware/iphone-ble-signer/assets/feature_send_128x160.rgb565": "efb96e9acd86221a52207545b09ffcec8e1289a3420ac74b5276656ca4f9e6a4",
+    "firmware/iphone-ble-signer/assets/feature_send_preview.png": "9909dd253f3a49a458fce891ac767d6f68d44e5d7b323713db458acd26908129",
+    "firmware/iphone-ble-signer/assets/feature_squads_128x160.rgb565": "29665915ea90276df99d02b99b5a05afebda87f85cdce15b0f37620aec9cd7f5",
+    "firmware/iphone-ble-signer/assets/feature_squads_preview.png": "c301c37c8080571993b7e7537183b1e0fb7687b5d6b8f4fc66a22269efdcc0bb",
+    "firmware/iphone-ble-signer/assets/feature_stake_128x160.rgb565": "9ff669b7c0b9b47ffde0dcd6fceaeb465afdd99816f1ac8feb9d754447c8eae3",
+    "firmware/iphone-ble-signer/assets/feature_stake_preview.png": "9d9123774508fd89b4635d4d6830fb21871d453c94a37df506631d9cffb0a862",
+    "firmware/iphone-ble-signer/assets/feature_swap_128x160.rgb565": "6f7a807b0b78cbd62f02e2915ce6101f0b197b5c29d87d43c63b036c7463a461",
+    "firmware/iphone-ble-signer/assets/feature_swap_preview.png": "f80f293f5a62d3b841c65411d727c6608e36f97be3b261b947786d9ea7c894c1",
+    "firmware/iphone-ble-signer/assets/features_reference.png": "7a0cfd56ec387c6a9c32b6d3b93d79af5762cd3300ea16608f26683fcd2b7437",
+    "firmware/iphone-ble-signer/assets/idle_128x160.rgb565": "c85ed273040db4561661c401ca37367a7f8077693ad6573c463dcbc976772f50",
+    "firmware/iphone-ble-signer/assets/idle_preview.png": "2a38f347047f5ecb496a9a4bfd275d830e28d3cfd8d8789a6d50a9d22bc1a17c",
+    "firmware/iphone-ble-signer/assets/idle_reference.png": "542f63d63666f239ccfb121f84c0ba07c7104d53aa7e3e7a98373088b3d10eed",
+    "firmware/iphone-ble-signer/assets/locked_standby_128x160.preview.png": "d5c9df0c75b296a879bf11ee259bd423ab01b5fd4a4dc9940a54ddec308f83b3",
+    "firmware/iphone-ble-signer/assets/locked_standby_128x160.rgb565": "81f5c69e38a8eb0e4081ff54d5e65930d9ca62c10ea2904573a2bb49a757956c",
+    "firmware/iphone-ble-signer/assets/pin_background_128x160.rgb565": "548beb52b362a914efc008814cf0b94867855e67571c9490154a571fc32d398d",
+    "firmware/iphone-ble-signer/assets/pin_background_preview.png": "3d81af0b196836af34b61c352a2fe2f67184bfa87862e1be9500cacc8afcb13e",
+    "firmware/iphone-ble-signer/assets/pin_reference.png": "e126f334ea0aa2b6070892b9d17ef8e8b0137b12533b321eb94ca67d6caff87b",
+    "firmware/iphone-ble-signer/assets/screensaver_still_128x160.preview.png": "6af89dee45900c4c506e51932da76224a539f3d9c752c026e83286c176c01f3c",
+    "firmware/iphone-ble-signer/assets/screensaver_still_128x160.rgb565": "81f5c69e38a8eb0e4081ff54d5e65930d9ca62c10ea2904573a2bb49a757956c",
+    "firmware/iphone-ble-signer/build.rs": "4dd1dbc4cc54b953e1a1a903cefa696a7b7a5b5e4829aec411460bbd36099560",
+    "firmware/iphone-ble-signer/diagnsotic.md": "bf9f65edb538762fc10816ba8784869baf8084c91c28f613213a2a6a261787e1",
+    "firmware/iphone-ble-signer/docs/ble-proof-plan.md": "7c157b525ff7ea14b802a6163dccb74c0f3f3bf408359093d2dc61cbc0c3f85e",
+    "firmware/iphone-ble-signer/docs/dual-element-board-review.md": "5668e5bc88d9b33a3a9a8f975621bf9335a9f1b281a6c765d319a2fc848cc642",
+    "firmware/iphone-ble-signer/partitions/unified_wallet_4mb.csv": "165e17d882163a10ed0ae335950968dd29a90cfb007187cbf68f31780c98ca0b",
+    "firmware/iphone-ble-signer/rust-toolchain.toml": "6cf0a2df390965b31e8fb2ef2a15cdf5811ddc7f6dfa50f8ba0f749a618cc1ca",
+    "firmware/iphone-ble-signer/scripts/cargo-flash.sh": "991d7291d6ba155ab1af97976d59fcd909d721e54e5a45e334451bc71087ef42",
+    "firmware/iphone-ble-signer/scripts/flash_factory_test.sh": "1f118f8f2336d2a5c6852aad4c34215f1d80f3226f5d512d491aabc465f7cd78",
+    "firmware/iphone-ble-signer/scripts/flash_se050_dev.sh": "142f08a669a44e37cdb1be3205dbe013e2058423ac59246918b3618c835959e5",
+    "firmware/iphone-ble-signer/scripts/pin_background.py": "5b32a661e5554c53bcac605633a540eee6969756dfe3055877312bf5bf57930d",
+    "firmware/iphone-ble-signer/scripts/prepare_bootloader.py": "ae16331da23e6a07a6281f87ea7596b39bb84ed63b24df0e46b3546f22baad05",
+    "firmware/iphone-ble-signer/scripts/ui_assets.py": "5abf7b08d010c018fedacb355738609d5ba2aaab6ea3466fcaa8667b983f6298",
+    "firmware/iphone-ble-signer/sdkconfig.defaults": "5d52c199d5882d41763931c98ed793c30af6db90db080ed7fefe0778fd03e9a9",
+    "firmware/iphone-ble-signer/src/bin/iphone_ble_wallet.rs": "6c9265475435171fa5056360848ff0762446e0e9bee83bd9a5a6758b003858bf",
+    "firmware/iphone-ble-signer/src/bin/peripheral_probe.rs": "eb41f0d936ebd79bb4a8914d554c94faa6f1a8067f4eeda947097f586cc28b6f",
+    "firmware/iphone-ble-signer/src/ble_session.rs": "1a83f54bef5ee4a0e8abba13d97b1b7f096bfc744615a2e13cca2a4f09114b72",
+    "firmware/iphone-ble-signer/src/ble_transport.rs": "c21718a5bf6407260df3bc413c20f6b79f034edcf505172051f46233df756d56",
+    "firmware/iphone-ble-signer/src/ble_tx.rs": "4f99b82f361e5b9490eb37e59335a3b589d66fc24690e65cadd3e50d81c7d448",
+    "firmware/iphone-ble-signer/src/board.rs": "dba9f14189db1afb3e162de10e0a6c8f293d19870a051e8861c98c15e032fdc8",
+    "firmware/iphone-ble-signer/src/build_info.rs": "b17432f645b3e3db073165fa536f7da5ab5e83b4629944257ceae7c630cebe6b",
+    "firmware/iphone-ble-signer/src/display.rs": "7ed5a408feb59d1141f032729273eec6dd1c75bc97698cbf7b8e86acfad64359",
+    "firmware/iphone-ble-signer/src/io_budget.rs": "dfeea52772b256c3018e2f5bde713f99e87107220eb4bf190155a887bc880ddb",
+    "firmware/iphone-ble-signer/src/local_ui.rs": "67c59fa3aee86f95ad7a7fb766e2ff1b98b7c83dab25c45a7b86e4cc477d8411",
+    "firmware/iphone-ble-signer/src/main.rs": "18090c620e6fe43e15ccce91de0519783af00b33e3379f3b1f9bda7b498b20af",
+    "firmware/iphone-ble-signer/src/pairing_lifecycle.rs": "c209fadefd99c97a9fb5ef967a422e1bd9c22d830cf30b7e1308dc4fcbeea6bb",
+    "firmware/iphone-ble-signer/src/review_ui.rs": "2582562d905abdb435eb8042ec19e71e50baa2514c2c81182534dd12db4a48cf",
+    "firmware/iphone-ble-signer/src/se050.rs": "c2246262e18314f73bc31332f8b4fa74a3c2e5eb28c0b5a028cc24c909726c17",
+    "firmware/iphone-ble-signer/src/se050_auth.rs": "458708ca18b9872dcd6fc324f0ae713e85c64ff5a2b0d216be89fe8dd5d03d69",
+    "firmware/iphone-ble-signer/src/se050_key_lifecycle.rs": "babe835051aa11d3d39c996c0dbd9d809e55d1d4b8dfbf6559d0f5868ed0bc31",
+    "firmware/iphone-ble-signer/src/se050_policy.rs": "451c1956ad0db8d64eb71257bbb3109dac59abebdfd1ec28ee2ea7c0158c646a",
+    "firmware/iphone-ble-signer/src/signing_review.rs": "ca7d72416a704e84d6eef973a9fd88ae4c6a8a0570b6110a35def553d1d43beb",
+    "firmware/iphone-ble-signer/src/transaction_verify.rs": "4c01966ea66bdc4ea744315f6e2943ab23f54b074476e58437bb8e24bd3b17c9",
+    "firmware/iphone-ble-signer/src/transport_frame.rs": "f680f4b072e1191345131c04422a747d8108485b7c0069242923914442b0175b",
+    "firmware/iphone-ble-signer/src/tropic.rs": "f1fddf462edf3c26be2089e0754f8fcb1e0b22feaab9fa806dbb988e8562f677",
+    "firmware/iphone-ble-signer/src/tropic_access.rs": "154cccb697656422880c6bccfac22cacb4cd0e232919cc6b44f5d8a0bd7edd02",
+    "firmware/iphone-ble-signer/src/tropic_l2.rs": "809815025e799df386f092e76456840bb1a9a724ae6f2ba9cdecfeab8b98199f",
+    "firmware/iphone-ble-signer/src/usb_host.rs": "11fc0245937d0049e65ffd3d6d925a4c08efa22609695900601fd900929e35e7",
+    "firmware/iphone-ble-signer/src/usb_session.rs": "5df0d7ea9b8c86ade057b41c35c6738c939d614bf48e3da521b19f54fd59ef0f",
+    "firmware/iphone-ble-signer/src/wallet_permissions.rs": "33ee1d82409d274cd272f74c4a8ce7dabd6284c44da2bcbca1cd1a7650de8e0b",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.cargo-ok": "afbf9d0f3560b0fd7795e81c42a0a79ee6b6fc67e064f77826aee642cad28d91",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.cargo_vcs_info.json": "39b25ba80363b216c8ed3a73fd35fc7e1cd58b22522304344dbfa2b8c7225b96",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.github/workflows/rust.yml": "894e6a1112b6876ad64af3e906818e8d55a6b11e73bd4a1755ec20a9aac6d06d",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.gitignore": "706b35f8f9d5535091150bd6f0f2f09a67663872c6458afc0cc1b2e88ed6f01c",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/Cargo.toml": "4c4b7c022ab923a8820ece4aba511939a862e4305e0804fa71e6540c5a49f079",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/Cargo.toml.orig": "94a0dde25fe74e029a81be1ce2be5b301cab442d01bc209569b2ca340fdffa83",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/LICENSE": "2413f1809e287ef4638287bb7dc70ee63f12b7965011fe2515b174b86e47ce72",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/README.md": "9a62d676fe825bead77add5a25b821ad772428dc5e187a4c63889b017d2e3fea",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/src/instruction.rs": "9df5119ac6402bb5bf6c8e5f45f6153fad455e40b889e40fe6367c32eaa7eeba",
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/src/lib.rs": "7705f2f643d3001544149d687fcb23cd84c41f4a840cefacc86d5a7834661598",
+    "tools/firmware-production/README.md": "8e5a5bddb59f1ce6431b35f43240310ae75d28b5e4c1a8c8ae105aa8921773b8",
+    "tools/firmware-production/factory.py": "b43c407f065937f111d13fc5605b7e302724c4391f91d70538c19608dcb1e647",
+    "tools/firmware-production/package.py": "33ad6b0cc702c6d3336a5c99c6055b47ea577dab9a1f015a45e095552c14ab39",
+    "tools/firmware-production/test_factory.py": "f075178aa6d8cf0ca4c81c468f64b777fc446c787a199233b814533f3cf92ebc"
+  },
+  "created_utc": "2026-09-29T21:27:25.179020+00:00",
+  "espflash": "espflash 3.3.0",
+  "rustc": "rustc 1.90.0-nightly (abf50ae2e 2025-09-16) (1.90.0.0)",
+  "esp_idf": "v5.2.3",
+  "profile": "release",
+  "flash_size": "4mb",
+  "release_scope": "200-unit open-hardware hackathon prize order",
+  "capabilities": {
+    "solana_ed25519": true,
+    "usb": true,
+    "ble": true,
+    "falcon": false,
+    "open_reflash": true,
+    "reset": false,
+    "pin_attempt_limit": 10,
+    "lockout_recovery": false
+  },
+  "flash_mode": "dio",
+  "flash_freq": "80mhz",
+  "minimum_physical_flash_bytes": 4194304,
+  "files": {
+    "Cargo.lock": {
+      "sha256": "0d2b2195fa4b81a1474059137afea65766cc3f08d1b6c6d54799aa7298794ab8",
+      "bytes": 59872
+    },
+    "README.md": {
+      "sha256": "8e5a5bddb59f1ce6431b35f43240310ae75d28b5e4c1a8c8ae105aa8921773b8",
+      "bytes": 6802
+    },
+    "bootloader-idf.bin": {
+      "sha256": "6591c2c70d9752b4400788ae486e683ad2adcdb35e6c6424497e55c3da555b49",
+      "bytes": 21584
+    },
+    "bootloader.bin": {
+      "sha256": "aa78c4fafc7b74fee4997ac01778769805355c6d1cfa272b2d4b59e4cbd090b1",
+      "bytes": 21616
+    },
+    "build.log": {
+      "sha256": "a60d00a2131974b727c4019d270662c456dcf441864b7f151bb7abddf6502e45",
+      "bytes": 354171
+    },
+    "diagnostic.bin": {
+      "sha256": "7f440854742b778383509a9fc2ebb8c27c1ebbba7b2be31082441e5d081e3afc",
+      "bytes": 522640
+    },
+    "diagnostic.elf": {
+      "sha256": "12c1a5b561f552af7e72a537c6d8055b9a80ab351c982d632c370f81e8b88312",
+      "bytes": 907956
+    },
+    "factory.py": {
+      "sha256": "b43c407f065937f111d13fc5605b7e302724c4391f91d70538c19608dcb1e647",
+      "bytes": 14292
+    },
+    "partition-table.bin": {
+      "sha256": "c9a826e85500d14d1854ce78e47452d4614a1be371bbd056278d2cb3398fbbfd",
+      "bytes": 3072
+    },
+    "partitions.csv": {
+      "sha256": "165e17d882163a10ed0ae335950968dd29a90cfb007187cbf68f31780c98ca0b",
+      "bytes": 407
+    },
+    "sdkconfig": {
+      "sha256": "68467a2f15ed15384392ca26c734119822cfa200dbdc9a1e667df2f345ec5825",
+      "bytes": 83094
+    },
+    "signer.bin": {
+      "sha256": "3566c13d973453489bd4f4ba4ebefd3ec4881db13e31c51a014ab95072bac9f1",
+      "bytes": 1589568
+    },
+    "signer.elf": {
+      "sha256": "dff5e0d22cea244c45d24c8f3107d628225afed7b7321d1f44a06ae1c41f4004",
+      "bytes": 2248184
+    },
+    "sources.tar.gz": {
+      "sha256": "baf3bc9d284dfddfb1ec5b370be1232071d12346a3ae7b4cd63a6544bf016e2b",
+      "bytes": 189404
+    }
+  }
+}

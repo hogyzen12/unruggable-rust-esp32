@@ -27,3 +27,10 @@ folders.txt
 .env.*
 !/firmware/iphone-ble-signer/Cargo.lock
 !/tools/firmware-host-tests/Cargo.lock
+
+# Generated output and local private records in any historical/research crate
+**/.embuild/
+**/target-*/
+**/node_modules/
+**/private-backups/
+**/*-keypair.json

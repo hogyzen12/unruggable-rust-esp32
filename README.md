@@ -1,40 +1,60 @@
-# Unruggable firmware
+# Unruggable V2 firmware
 
-Choose the firmware family that matches your board:
+The default `main` branch contains the working **dual-secure-element firmware**
+for the Unruggable V2 board: **ESP32-S3 + SE050 + Tropic**, display, USB and BLE.
+The current qualified baseline is **v0.3.3**, build `v2-ff212385a4d13c18`.
 
-| Firmware family | Hardware | Preserved release |
-| --- | --- | --- |
-| [ESP32-only](firmware/esp32-only/README.md) | Original ESP32, BOOT button, software keys; no secure elements or display | **v0.1.0 — 2026 customer preorder firmware** |
-| [Dual-element / V2](firmware/dual-element/README.md) | ESP32-S3 + SE050 + Tropic, display, USB/BLE | **v0.3.3 — 2026 MLH firmware**, derived from the new app monorepo |
+## Working firmware and tests
 
-The ESP32-only archive preserves the recovered source and firmware used for the
-early preorder boards. The operator confirmed its identity on 2026-10-06. The
-archive records the historical evidence and its limits: the original flash logs
-did not record per-board binary hashes.
+| Location | Purpose |
+| --- | --- |
+| [firmware/iphone-ble-signer/](firmware/iphone-ble-signer/) | Main V2 firmware and board diagnostics |
+| [tools/firmware-host-tests/](tools/firmware-host-tests/) | Current firmware logic and display tests |
+| [tools/firmware-production/](tools/firmware-production/) | Package creation, factory flashing and its tests |
+| [tools/firmware-lot/](tools/firmware-lot/) | Manufacturing record reporting and its tests |
+| [releases/mlh-2026/](releases/mlh-2026/README.md) | v0.3.3 release instructions, manifest and qualification |
 
-The dual-element release was already published. Its source, original manifest,
-release tag and download package remain unchanged. Development for that family
-belongs in `firmware/iphone-ble-signer/` in the new app monorepo,
-`hogyzen12/unruggable-app-pure-UX`.
+The historical `iphone-ble-signer` directory name covers both desktop USB and
+Bluetooth operation. Its path remains fixed because the published manifest and
+test harnesses reference it. Firmware source and the released binaries are
+unchanged by this repository cleanup.
 
-## Find source, binaries and instructions
-
-- [ESP32-only v0.1.0 archive and flashing instructions](firmware/esp32-only/releases/v0.1.0/README.md)
-- [ESP32-only downloadable release](https://github.com/hogyzen12/unruggable-rust-esp32/releases/tag/firmware-v0.1.0-esp32-preorders-2026)
-- [V2 v0.3.3 source, owner instructions and qualification](releases/mlh-2026/README.md)
-- [V2 original downloadable release](https://github.com/hogyzen12/unruggable-rust-esp32/releases/tag/firmware-v0.3.3-mlh-2026)
-
-Verify both checked-out firmware families without compiling or connecting a board:
+From the repository root:
 
 ```sh
 python3 firmware/verify.py
+cargo test --locked --manifest-path tools/firmware-host-tests/Cargo.toml
+python3 -m unittest discover -s tools/firmware-production -v
+python3 -m unittest discover -s tools/firmware-lot -v
 ```
 
-The V2 source remains at `firmware/iphone-ble-signer/` because the published
-manifest pins those exact paths. `firmware/dual-element/` is its family index.
-The older top-level `esp32-solana-signer/`, `twofa/` and transaction-builder
-directories remain as historical development material; use the family links
-above when selecting shipped firmware.
+Use the [release instructions](releases/mlh-2026/README.md) for build prerequisites
+and existing-wallet or blank-board flashing. Download the exact qualified
+package from the [v0.3.3 release](https://github.com/hogyzen12/unruggable-rust-esp32/releases/tag/firmware-v0.3.3-mlh-2026).
 
-See [firmware maintenance](docs/firmware-maintenance.md) for the repository layout,
-release provenance and the relationship to ongoing development.
+## App relationship
+
+This V2 source was developed with the new app monorepo,
+`hogyzen12/unruggable-app-pure-UX`. Its current 78 manifest-listed source files
+match the copy in that monorepo. The app does not load this checkout at runtime
+or require it for a normal desktop/iPhone build. See
+[the exact dependency boundary](docs/app-dependencies.md).
+
+Keep firmware and app protocol changes coordinated. The monorepo remains the
+current development source of truth; qualified changes are exported here. This
+repository's `main` is the V2 firmware checkout, not a collection of unrelated
+board experiments. Changing source requires a new build identity and qualification;
+the existing release tags and archived binaries stay fixed.
+
+## Preserved earlier work
+
+- [ESP32-only preorder v0.1.0](firmware/esp32-only/README.md): frozen source,
+  firmware images, checksums and provenance for the original preorder boards.
+- [Legacy development archive](archive/README.md): older ESP32/2FA code,
+  transaction-builder examples and Squads experiments retained with Git history.
+- [Falcon/SE050 research branch](https://github.com/hogyzen12/unruggable-rust-esp32/tree/research/falcon-se050):
+  recovered Falcon firmware, multisig work, test harnesses and historical
+  checkpoint notes. It is separate from the qualified V2 firmware.
+
+See [maintenance](docs/firmware-maintenance.md) and
+[test history](docs/test-history.md) for what is active, archived or kept locally.

@@ -1,6 +1,6 @@
 > Historical development commands. For the recovered ESP32 preorder firmware,
-> use [the frozen v0.1.0 archive](../firmware/esp32-only/releases/v0.1.0/README.md).
-> For V2 hardware, use [the dual-element release](../firmware/dual-element/README.md).
+> use [the frozen v0.1.0 archive](../../../firmware/esp32-only/releases/v0.1.0/README.md).
+> For V2 hardware, use [the dual-element release](../../../firmware/dual-element/README.md).
 
 cargo +esp build
 to compile

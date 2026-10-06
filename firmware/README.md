@@ -1,20 +1,13 @@
-# Firmware families
+# Firmware layout
 
-| Folder | Board | Role |
-| --- | --- | --- |
-| [esp32-only/](esp32-only/README.md) | Original ESP32 without secure elements | Frozen v0.1.0 preorder source, binaries and aggregate evidence |
-| [dual-element/](dual-element/README.md) | V2 ESP32-S3 with SE050 and Tropic | Index for the already-published v0.3.3 MLH release |
-| [iphone-ble-signer/](iphone-ble-signer/) | V2 ESP32-S3 with SE050 and Tropic | Exact source location pinned by the original MLH manifest |
+The active default-branch firmware is **V2: ESP32-S3 + SE050 + Tropic**.
 
-`dual-element/` and `iphone-ble-signer/` describe the same firmware family. The
-original source path stays fixed so the existing release verifier, source
-identity and build tools continue to work.
+| Folder | Role |
+| --- | --- |
+| [iphone-ble-signer/](iphone-ble-signer/) | Working V2 source, USB/BLE and diagnostics; exact path retained for published manifests and tests |
+| [dual-element/](dual-element/README.md) | V2 release identity, source and package index |
+| [esp32-only/](esp32-only/README.md) | Frozen v0.1.0 archive for original preorder boards |
 
-From the repository root:
-
-```sh
-python3 firmware/verify.py
-```
-
-Release snapshots are immutable references. See
-[maintenance notes](../docs/firmware-maintenance.md) before importing a new release.
+Verify both release baselines from the repository root with
+`python3 firmware/verify.py`. See [maintenance](../docs/firmware-maintenance.md)
+for the research branch, earlier archives and future updates.

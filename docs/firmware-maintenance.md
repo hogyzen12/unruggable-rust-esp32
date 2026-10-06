@@ -1,47 +1,44 @@
 # Firmware maintenance
 
-## Repository map
+## Branches and layout
 
-- `firmware/esp32-only/releases/v0.1.0/`: frozen recovered preorder firmware,
-  including binaries, source, original operator helpers and aggregate evidence.
-- `firmware/dual-element/`: index for the V2 firmware family.
-- `firmware/iphone-ble-signer/`: exact V2 v0.3.3 source at its manifest-pinned paths.
-- `releases/mlh-2026/`: original V2 release documentation, manifest and verifier.
-- `esp32-solana-signer/`, `twofa/`, `solana-transaction-builder/` and other older
-  directories: historical development material retained in place.
+- `main`: working dual-element V2 firmware, active host/factory/lot tests and
+  release tooling. Current qualified baseline: v0.3.3.
+- `research/falcon-se050`: recovered experimental SE050/Falcon, Vector and
+  multisig source, test harnesses and historical checkpoint notes.
+- `master`: retained previous repository layout at `48c2189` for existing links
+  and local checkouts. New firmware repository work starts on `main`.
+- `firmware/esp32-only/releases/v0.1.0/`: immutable preorder archive.
+- `archive/legacy-development/`: older public examples and development source.
 
-## Preserve development and released identities
+The `firmware-v0.3.3-mlh-2026` and
+`firmware-v0.1.0-esp32-preorders-2026` release tags and download packages remain
+unchanged. The V2 manifest pins 78 source files and their paths; the preorder
+manifest pins its recovered source, images and evidence summaries.
 
-This housekeeping was prepared in a separate checkout based on the published
-`master` commit `dd1f86d`. Existing dirty development checkouts were not switched,
-reset, cleaned, staged or merged into this publication. Their working files remain
-in place. This commit archives the selected preorder source and tools; it is not
-a backup of every unrelated local experiment.
+## Firmware and app ownership
 
-Do not use the older top-level crate as the reference for supporting preorder
-owners. It predates the PIN/setup/key-lifecycle changes in the recovered archive.
-The new public archive captures those uncommitted changes as a named reference.
+The qualified V2 code currently matches the new app monorepo at
+`firmware/iphone-ble-signer/`. Develop coordinated changes in that monorepo and
+export qualified firmware revisions here. Keep release tags and packages fixed;
+future source changes need a new build identity, package and qualification.
+Do not import older root-crate or Falcon research files over the V2 baseline.
 
-Keep release source, binaries and manifests fixed. A rebuild or firmware edit
-needs a new versioned archive, new hashes and its own qualification. Add updated
-documentation outside a frozen archive where possible.
+See [app-dependencies.md](app-dependencies.md) for the app's internal firmware
+copy, shared tests and legacy local build-tool references.
 
-## ESP32-only
+## Tests and records
 
-Use the v0.1.0 archive as the stable preorder support reference. The operator
-confirmed its shipping use, while the provenance notes retain the limits of the
-historical logs. Keep full per-device station logs and device dumps local.
+Keep the current firmware host tests and factory/lot tests active. Keep historic
+research harnesses and checkpoint notes with their research branch. Archive old
+examples instead of mixing their entry points with V2. See
+[test-history.md](test-history.md).
 
-## Dual-element / V2
+Existing local development workspaces are retained in place, including their
+uncommitted changes, nested repositories, local keys and full checkpoint data.
+The research branch is a selected source snapshot, not a public backup of private
+operator data. Build caches and private manufacturing records are not committed.
 
-The source of truth for development is `firmware/iphone-ble-signer/` in
-`hogyzen12/unruggable-app-pure-UX`. Qualify future releases there, then export their
-source, manifests and packages into this public repository with a new release
-identity. Do not pull V2 source from the older ESP32 or SE050/Falcon experiments.
-
-The existing `firmware-v0.3.3-mlh-2026` tag and package remain unchanged. Its
-manifest includes 78 source files across `firmware/iphone-ble-signer/` and `tools/`.
-Preserve those paths so its verifier and source-derived build identity stay valid.
-
-Verify both checked-out families with `python3 firmware/verify.py`. The existing
-MLH verifier also accepts an extracted original package through `--package`.
+From the repository root, `python3 firmware/verify.py` verifies the current
+release baselines. The MLH verifier also accepts an extracted original package
+through `--package`.

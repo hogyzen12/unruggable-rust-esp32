@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-06",
+  "hardware": "ESP32-D0WD-V3 revision 3.1, 4 MB flash",
+  "tool": "esptool 4.11.0",
+  "baud": 115200,
+  "flash_mode": "dio",
+  "flash_frequency": "40m",
+  "written_offsets": [
+    "0x1000",
+    "0x8000",
+    "0x10000"
+  ],
+  "all_written_image_hashes_verified": true,
+  "whole_flash_erase_performed": false,
+  "efuses_changed": false,
+  "checks": {
+    "GET_INFO": "INFO;VER=0.1.0;AUTH_MODE=UNSET;FINALIZED=0;LOCKED=0;RETRIES_LEFT=10;KEY_STATE=UNINITIALIZED",
+    "GET_PUBKEY": "ERROR:WALLET_NOT_INITIALIZED",
+    "GET_TIME": "TIME:0",
+    "SIGN:AA==": "ERROR:MODE_UNSET"
+  },
+  "wallet_or_pin_created": false,
+  "signature_generated": false,
+  "device_identifiers": "Retained in the local bench record; omitted from this public summary."
+}

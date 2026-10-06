@@ -1,0 +1,82 @@
+{
+  "recorded_at": "2026-10-06",
+  "source_log_sha256": "2bceffda5e46c6af88525a3774e66ae63e38c4e034dadf493001e8ed8d899c2c",
+  "classification": "Operator confirmed April runs were SPI and identified May/June runs as customer preorders; these are flash records, not a recipient shipment ledger.",
+  "successful_flash_records": 788,
+  "distinct_boards": 773,
+  "batches": [
+    {
+      "batch_tag": "final-live-check",
+      "first_flash_utc": "2026-04-09T08:32:45Z",
+      "last_flash_utc": "2026-04-09T08:32:45Z",
+      "successful_flash_records": 1,
+      "distinct_boards": 1,
+      "cohort": "SPI / station QA"
+    },
+    {
+      "batch_tag": "qa-e2e-flash",
+      "first_flash_utc": "2026-04-09T20:26:46Z",
+      "last_flash_utc": "2026-04-09T20:58:40Z",
+      "successful_flash_records": 4,
+      "distinct_boards": 4,
+      "cohort": "SPI / station QA"
+    },
+    {
+      "batch_tag": "reset-dev-unit",
+      "first_flash_utc": "2026-04-09T20:31:26Z",
+      "last_flash_utc": "2026-04-09T21:02:27Z",
+      "successful_flash_records": 4,
+      "distinct_boards": 4,
+      "cohort": "SPI / station QA"
+    },
+    {
+      "batch_tag": "dev-batch-001",
+      "first_flash_utc": "2026-04-09T21:05:00Z",
+      "last_flash_utc": "2026-04-10T22:40:17Z",
+      "successful_flash_records": 246,
+      "distinct_boards": 245,
+      "cohort": "SPI / station QA"
+    },
+    {
+      "batch_tag": "dev-STUK",
+      "first_flash_utc": "2026-05-01T09:13:17Z",
+      "last_flash_utc": "2026-05-23T15:18:17Z",
+      "successful_flash_records": 25,
+      "distinct_boards": 25,
+      "cohort": "customer preorder"
+    },
+    {
+      "batch_tag": "dev-2026-05-27-r1",
+      "first_flash_utc": "2026-05-27T02:38:37Z",
+      "last_flash_utc": "2026-05-28T04:51:17Z",
+      "successful_flash_records": 189,
+      "distinct_boards": 187,
+      "cohort": "customer preorder"
+    },
+    {
+      "batch_tag": "dev-2026-05-30-r2",
+      "first_flash_utc": "2026-05-29T22:07:21Z",
+      "last_flash_utc": "2026-06-27T00:01:40Z",
+      "successful_flash_records": 319,
+      "distinct_boards": 315,
+      "cohort": "customer preorder"
+    }
+  ],
+  "preorders": {
+    "successful_flash_records": 533,
+    "distinct_boards": 523,
+    "all_firmware_versions": [
+      "0.1.0"
+    ],
+    "all_info_responses": [
+      "INFO;VER=0.1.0;AUTH_MODE=UNSET;FINALIZED=0;LOCKED=0;RETRIES_LEFT=10;KEY_STATE=UNINITIALIZED"
+    ],
+    "all_pubkey_responses": [
+      "ERROR:WALLET_NOT_INITIALIZED"
+    ],
+    "all_statuses": [
+      "PASS"
+    ],
+    "per_board_binary_hashes_recorded": false
+  }
+}

@@ -1,0 +1,42 @@
+[package]
+name = "esp32-solana-signer"
+version = "0.1.0"
+authors = ["hogyzen12 <billypapas12@gmail.com>"]
+edition = "2021"
+resolver = "2"
+rust-version = "1.77"
+
+[[bin]]
+name = "esp32-solana-signer"
+harness = false
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true
+opt-level = "z"
+
+[features]
+default = []
+experimental = ["esp-idf-svc/experimental"]
+
+[dependencies]
+log = "0.4"
+esp-idf-svc = { version = "0.51", features = ["critical-section"] }
+anyhow = "1"
+ed25519-dalek = { version = "2.1.1", default-features = false, features = ["rand_core"] }
+rand_core = { version = "0.6", default-features = false, features = ["getrandom"] }
+getrandom = { version = "0.2", features = ["custom"] }
+esp-idf-sys = { version = "0.36.1", features = ["binstart"] }
+bs58 = "0.5"
+base64 = "0.22"
+data-encoding = "2.9"
+hmac = "0.12"
+sha1 = "0.10"
+sha2 = "0.10"
+subtle = "2.6"
+pbkdf2 = "0.12"
+
+[build-dependencies]
+embuild = "0.33"

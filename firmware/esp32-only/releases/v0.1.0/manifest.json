@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "family": "esp32-only",
+  "firmware_version": "0.1.0",
+  "archive_id": "esp32-only-preorders-2026-v0.1.0",
+  "release_tag": "firmware-v0.1.0-esp32-preorders-2026",
+  "archive_date": "2026-10-06",
+  "operator_confirmed_preorder_firmware": true,
+  "source_project": "dev-firmware/unruggable-rust-esp32/esp32-solana-signer",
+  "source_checkout_base_commit": "33b9c91",
+  "source_checkout_had_uncommitted_changes": true,
+  "original_local_recovery_manifest_sha256": "694e5719ef56e3bfabc74fea31f791e5b91bfd50d5cf8b82fad6dbee6046fc78",
+  "historical_batch_artifact_directory": "target",
+  "recovered_artifact_directory": "target-dev/xtensa-esp32-espidf/release",
+  "historical_batch_artifact_directory_available": false,
+  "historical_per_board_binary_hashes_recorded": false,
+  "app_image_generated_from_preserved_elf_with": "espflash 3.3.0",
+  "flash": {
+    "chip": "esp32",
+    "size": "4MB",
+    "mode": "dio",
+    "frequency": "40m",
+    "offsets": {
+      "firmware/bootloader.bin": "0x1000",
+      "firmware/partition-table.bin": "0x8000",
+      "firmware/signer.bin": "0x10000"
+    }
+  },
+  "files": {
+    "README.md": {
+      "bytes": 4683,
+      "sha256": "8aafdb662484ca6109181f326015e85e4a1e33fc86728af52dfed8cd1e383c50",
+      "origin": "public archival documentation or aggregate evidence, 2026-10-06"
+    },
+    "evidence/batch-summary.json": {
+      "bytes": 2558,
+      "sha256": "7c6e16b8c19141f8327101e9dfe6804ff91e95320a10adff1acd66014fb7acce",
+      "origin": "public archival documentation or aggregate evidence, 2026-10-06"
+    },
+    "evidence/bench-summary.json": {
+      "bytes": 767,
+      "sha256": "77d9851f73e042d284b4a82c70837b6c0b8ee584d2d4475690b3b438097e80da",
+      "origin": "public archival documentation or aggregate evidence, 2026-10-06"
+    },
+    "evidence/provenance.md": {
+      "bytes": 3329,
+      "sha256": "60f2b9fea744b6f7eb149decb1320fc5c1bcb5f8c33a0df2d0a3fa76f750b50b",
+      "origin": "public archival documentation or aggregate evidence, 2026-10-06"
+    },
+    "firmware/bootloader.bin": {
+      "bytes": 26720,
+      "sha256": "c279c2a8a4d5293878247b2f815f8e1c85c24486ecf03019f68752115dfa4564",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "firmware/original-flasher-args.json": {
+      "bytes": 913,
+      "sha256": "f3f8fe50ee0b40102974a4166a97d843313a014c255dc4527329685c679a138f",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "firmware/partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "firmware/sdkconfig": {
+      "bytes": 56800,
+      "sha256": "796061ce442a9a6fe79b12f8fbb9a6f3792362371a38065b1931ac783356d876",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "firmware/signer.bin": {
+      "bytes": 557456,
+      "sha256": "95e8173b21821eb3cc8256a27d70165307e091668e4755c97e2fd7eef9299cb7",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "firmware/signer.elf": {
+      "bytes": 839396,
+      "sha256": "8f2feb16a0bf56e803f441e5380986e718f7d6f214b2ade31a6244416a39c16b",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/.cargo/config.toml": {
+      "bytes": 343,
+      "sha256": "7a1a53b605a8992294b2a0aa1e86cb31064fa52f6d55fa7a1204a3da71cac25b",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/BATCH_FLASHING.md": {
+      "bytes": 8294,
+      "sha256": "13352eb42b2d1c21edf693cec7300bc4bac99a0da90ffda067e9f05fbdf593ca",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/Cargo.lock": {
+      "bytes": 52404,
+      "sha256": "82a1ed3acfdb5b1db1b609f11e9f70580f74fe0d5102840985c684306615ade0",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/Cargo.toml": {
+      "bytes": 925,
+      "sha256": "f6fba666ebd2929a94b83ed8347ba105f1812f5a45022f3e394561ee963c30bb",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/DEV_DEVICE_FIRMWARE_SPEC.md": {
+      "bytes": 9095,
+      "sha256": "cf12904ad0bfacbc7738584ac01f6e57ecfca4d7d2cf6832534989a2653a1583",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/DEV_UNIT_INFO.md": {
+      "bytes": 6201,
+      "sha256": "8d1bff3cc65cae96bc4a5d953e996ff213871a163ba68dda8be6a5866d49a97d",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/FIRMWARE_FLOW.md": {
+      "bytes": 2617,
+      "sha256": "3da64131c825d4124924df7aea9990f61ced1ea2a2dc8945466fed4c63511cf2",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/build.rs": {
+      "bytes": 53,
+      "sha256": "5ee1451deff32bd1a0a73d218b79f9cee6111e0f26862cd3a53e9b5009ddff4b",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/buildnflash.md": {
+      "bytes": 3092,
+      "sha256": "c8802ebcc9e60010849addcdd66784abe565ddd6ad4a8ed65a34284c6f7abeb5",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/dev_flash_gui.py": {
+      "bytes": 58887,
+      "sha256": "ec33cd7e050fa54964c724ffbfdcabf0c902f705957870ba93ce79957c3d3bf0",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/flash_hub_dev.py": {
+      "bytes": 30019,
+      "sha256": "e8981c5219d629eb9f49f6e17559b4e57e965f91d9774288426f4b81d106896e",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/flash_profiles.json": {
+      "bytes": 787,
+      "sha256": "844c29a830679886882737cfe3866d02e282fe422c6e606943209442e1b9d037",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/protocol_rtt.py": {
+      "bytes": 2988,
+      "sha256": "b514337d022187b58003b7bee803638e86a46f78cac7a5bc1986b9706a798414",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/provision_dev.sh": {
+      "bytes": 11167,
+      "sha256": "bd02ba29797c8e452bb3deb3e11b74bc9615864ac3f9d8bf32d8d21c9a4cac4a",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/provision_dev_batch.py": {
+      "bytes": 14421,
+      "sha256": "e75efd8e31c8c366f3d514246dd3a7d95ed07a1e6e0c2a5e27fa0b5b3d497ea1",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/qa_e2e_dev.py": {
+      "bytes": 3823,
+      "sha256": "c0b2f4b548b810165d4d63ea20ba568439748603c8acb2f895294d701a93ec2b",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/qa_sample_dev.py": {
+      "bytes": 9039,
+      "sha256": "d1f8d76525f442924e12cc4cfef88b0d24c28210c4d099e07af0672c9bf1cabb",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/reset_dev_unit.sh": {
+      "bytes": 1558,
+      "sha256": "211d94c4423f63db3b283066abc1204a1d2e8a550f21af1f4c6029167ddc6a2f",
+      "origin": "original development project operator helper, copied unchanged"
+    },
+    "source/rust-toolchain.toml": {
+      "bytes": 28,
+      "sha256": "6cf0a2df390965b31e8fb2ef2a15cdf5811ddc7f6dfa50f8ba0f749a618cc1ca",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/sdkconfig.defaults": {
+      "bytes": 611,
+      "sha256": "e6aa2c76101587f78e2f9db0aa78d740a718e4e6b8aae131425dfa590f1e282e",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/src/main.rs": {
+      "bytes": 34535,
+      "sha256": "c563097d2af3e9c35c7836f20893103d413f5614ea17d5039cb64605e167d0b4",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    },
+    "source/src/twofa.rs": {
+      "bytes": 6215,
+      "sha256": "b3f55131bb765d686bcd4391d42cf4f134450ec0452f1cf880e4ef14dc8496f0",
+      "origin": "original local recovery snapshot, byte-for-byte"
+    }
+  }
+}

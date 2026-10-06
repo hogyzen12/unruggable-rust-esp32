@@ -1,0 +1,9 @@
+# Device dumps and per-device manufacturing records stay local.
+**/private-backups/
+**/factory-records/
+**/dev_flash_log.csv
+**/target/
+**/target-*/
+**/.embuild/
+**/__pycache__/
+**/.DS_Store

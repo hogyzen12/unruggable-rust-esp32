@@ -1,0 +1,24 @@
+{
+  "default_profile_id": "dev_boards",
+  "profiles": [
+    {
+      "profile_id": "dev_boards",
+      "name": "Current Dev Boards Hub Station",
+      "description": "Current UART dev-board firmware on the dedicated 4-port USB-C flashing hub.",
+      "hub_location_prefix": "1-1",
+      "project_root": ".",
+      "provision_script": "provision_dev.sh",
+      "target_dir": "target",
+      "build_command": "cargo build --release --target xtensa-esp32-espidf",
+      "artifact_check": "xtensa-esp32-espidf/release/esp32-solana-signer",
+      "log_csv": "logs/dev_flash_log.csv",
+      "default_parallel": 1,
+      "default_skip_build": true,
+      "default_skip_efuse_check": true,
+      "port_prefixes": [
+        "/dev/cu.usbserial"
+      ],
+      "batch_tag_prefix": "dev"
+    }
+  ]
+}

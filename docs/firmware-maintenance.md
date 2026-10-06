@@ -20,7 +20,9 @@ manifest pins its recovered source, images and evidence summaries.
 
 The qualified V2 code currently matches the new app monorepo at
 `firmware/iphone-ble-signer/`. Develop coordinated changes in that monorepo and
-export qualified firmware revisions here. Keep release tags and packages fixed;
+export committed firmware revisions here using the
+[itemized handoff checklist](firmware-handoff.md). Qualification is a separate
+step required before publishing a new firmware release. Keep release tags and packages fixed;
 future source changes need a new build identity, package and qualification.
 Do not import older root-crate or Falcon research files over the V2 baseline.
 
@@ -39,6 +41,8 @@ uncommitted changes, nested repositories, local keys and full checkpoint data.
 The research branch is a selected source snapshot, not a public backup of private
 operator data. Build caches and private manufacturing records are not committed.
 
-From the repository root, `python3 firmware/verify.py` verifies the current
-release baselines. The MLH verifier also accepts an extracted original package
-through `--package`.
+From the repository root, `bash tools/check-firmware.sh` runs the shared checks.
+`python3 firmware/verify.py` verifies preserved releases independently of current
+V2 source; use `--dual-package` for an extracted original V2 package.
+`python3 tools/firmware-handoff/handoff.py verify` checks current source against
+its recorded monorepo export. GitHub runs both types of verification.

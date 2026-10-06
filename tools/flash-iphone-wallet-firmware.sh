@@ -14,7 +14,7 @@ UPSTREAM_CMAKE_BIN="$UPSTREAM_IDF_ROOT/tools/cmake/3.24.0/CMake.app/Contents/bin
 UPSTREAM_NINJA_BIN="$UPSTREAM_IDF_ROOT/tools/ninja/1.11.1"
 
 if [[ ! -f "$FLASH_SCRIPT" ]]; then
-  echo "error: vendored firmware is missing. Run ./tools/sync-iphone-firmware.sh first." >&2
+  echo "error: V2 firmware is missing. Restore this checkout's firmware/iphone-ble-signer tree; see docs/firmware-handoff.md." >&2
   exit 1
 fi
 

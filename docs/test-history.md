@@ -5,11 +5,14 @@
 The default branch keeps these existing checks and their original source paths:
 
 ```sh
-python3 firmware/verify.py
-cargo test --locked --manifest-path tools/firmware-host-tests/Cargo.toml
-python3 -m unittest discover -s tools/firmware-production -v
-python3 -m unittest discover -s tools/firmware-lot -v
+bash tools/check-firmware.sh
 ```
+
+This runs Rust 1.92.0 host tests, factory/lot tests, export regression tests,
+current export provenance checks and preserved-release verification. GitHub
+Actions runs the same checks on pushes/PRs to `main`. The preserved V2 check
+reads its pinned historical commit; it does not require newer working source
+to match v0.3.3. See the [handoff checklist](firmware-handoff.md).
 
 The [MLH release record](../releases/mlh-2026/README.md) documents the original
 USB/BLE, device UI, signing, factory and other qualification evidence. That record

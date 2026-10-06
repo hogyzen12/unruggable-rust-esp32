@@ -22,11 +22,12 @@ unchanged by this repository cleanup.
 From the repository root:
 
 ```sh
-python3 firmware/verify.py
-cargo test --locked --manifest-path tools/firmware-host-tests/Cargo.toml
-python3 -m unittest discover -s tools/firmware-production -v
-python3 -m unittest discover -s tools/firmware-lot -v
+bash tools/check-firmware.sh
 ```
+
+Follow the itemized [monorepo → firmware handoff checklist](docs/firmware-handoff.md)
+for new development, exports, checks and publication. The legacy sync helper is
+retired. CI checks current source and preserved releases independently.
 
 Use the [release instructions](releases/mlh-2026/README.md) for build prerequisites
 and existing-wallet or blank-board flashing. Download the exact qualified
@@ -35,14 +36,18 @@ package from the [v0.3.3 release](https://github.com/hogyzen12/unruggable-rust-e
 ## App relationship
 
 This V2 source was developed with the new app monorepo,
-`hogyzen12/unruggable-app-pure-UX`. Its current 78 manifest-listed source files
-match the copy in that monorepo. The app does not load this checkout at runtime
+`hogyzen12/unruggable-app-pure-UX`. The qualified v0.3.3 baseline matched 78
+manifest-listed source files in that monorepo.
+[Current export provenance](firmware/v2-source.json) records the committed
+revision and hashes for the working firmware and shared tools.
+The app does not load this checkout at runtime
 or require it for a normal desktop/iPhone build. See
 [the exact dependency boundary](docs/app-dependencies.md).
 
 Keep firmware and app protocol changes coordinated. The monorepo remains the
-current development source of truth; qualified changes are exported here. This
-repository's `main` is the V2 firmware checkout, not a collection of unrelated
+current development source of truth; committed changes are exported here and
+qualified separately before release. This repository's `main` is the V2 firmware
+checkout, not a collection of unrelated
 board experiments. Changing source requires a new build identity and qualification;
 the existing release tags and archived binaries stay fixed.
 

@@ -1,7 +1,9 @@
 # What the app depends on
 
-Checked against `unruggable-app-pure-UX` on 2026-10-06. This cleanup changes the
-public firmware repository, not the app working tree or its local toolchain.
+Checked against `unruggable-app-pure-UX` on 2026-10-06. The handoff safeguards
+update the legacy helper and its missing-source error
+in both workspaces, with a checklist in each. App code and the local toolchain
+are unchanged.
 
 ## Running or building the app
 
@@ -11,8 +13,9 @@ script do not import this sibling firmware checkout. Normal app builds do not
 build ESP-IDF firmware.
 
 The app monorepo contains its own firmware copy at `firmware/iphone-ble-signer/`.
-All 78 entries pinned by the v0.3.3 release manifest match this repository's
-copy. That is the source used by the app's firmware tests and package tools.
+At the v0.3.3 baseline, all 78 release-manifest entries matched this
+repository's copy. Current exports have separate commit/hash provenance in
+`firmware/v2-source.json`. App tests and package tools use the monorepo's own source.
 
 ## Tests that share firmware code
 
@@ -42,16 +45,15 @@ when those directories exist, and prepends available compiler/CMake/Ninja tools
 to `PATH`. This is a developer build-environment convenience, not an app runtime
 or firmware-source dependency. The original directory is retained in place.
 
-`tools/sync-iphone-firmware.sh` is an older, manually invoked source-copy helper.
-Its default source is that same old ESP32/SE050 working directory. Running it can
-overwrite the monorepo's newer firmware. It is not part of the normal app build;
-the monorepo's existing orientation notes already say not to use it as a routine
-pre-build step. It was not invoked or changed during this cleanup.
+`tools/sync-iphone-firmware.sh` is now a retired entry point that fails without
+copying files in either workspace. Its former default could overwrite V2 source
+with the old development tree. Use the explicit committed-source exporter in
+the clean firmware checkout; see [the checklist](firmware-handoff.md).
 
 ## Future decoupling
 
 The remaining local environment coupling can be removed by giving firmware builds
-an independently configured ESP-IDF/toolchain installation and retiring the old
-source-copy helper. That change belongs in the app's developer tooling, separate
+an independently configured ESP-IDF/toolchain installation. The source-copy
+helper has already been retired. Further decoupling belongs in the app's developer tooling, separate
 from reorganizing these firmware sources. No app behavior or protocol change is
 required to remove those old filesystem references.

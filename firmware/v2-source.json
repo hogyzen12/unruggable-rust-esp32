@@ -1,0 +1,366 @@
+{
+  "files": {
+    "firmware/iphone-ble-signer/.cargo/config.toml": {
+      "mode": "100644",
+      "sha256": "352ca204f840cdbbea540a5e6fb6c3944eb6a2218eb69027390addba1dc5e810"
+    },
+    "firmware/iphone-ble-signer/.gitignore": {
+      "mode": "100644",
+      "sha256": "1af3258fcccfcd17959051035727ba1a1a031d3a0ff278bc271588ea0e259afa"
+    },
+    "firmware/iphone-ble-signer/Cargo.lock": {
+      "mode": "100644",
+      "sha256": "0d2b2195fa4b81a1474059137afea65766cc3f08d1b6c6d54799aa7298794ab8"
+    },
+    "firmware/iphone-ble-signer/Cargo.toml": {
+      "mode": "100644",
+      "sha256": "7f04f579561a06666c7a3f71ac8e3280cea0f908d7c37ef553fd5ceb2f6da770"
+    },
+    "firmware/iphone-ble-signer/README.md": {
+      "mode": "100644",
+      "sha256": "4c60712ddada15a6bb6944f5b80b424d2db52a4854452825978af9da71f7e1bd"
+    },
+    "firmware/iphone-ble-signer/UPSTREAM-README.md": {
+      "mode": "100644",
+      "sha256": "f5f406bfd40b0b4c29e0106e20cb0058751de933989ce0d22d07d4b2daf2c494"
+    },
+    "firmware/iphone-ble-signer/assets/feature_send_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "efb96e9acd86221a52207545b09ffcec8e1289a3420ac74b5276656ca4f9e6a4"
+    },
+    "firmware/iphone-ble-signer/assets/feature_send_preview.png": {
+      "mode": "100644",
+      "sha256": "9909dd253f3a49a458fce891ac767d6f68d44e5d7b323713db458acd26908129"
+    },
+    "firmware/iphone-ble-signer/assets/feature_squads_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "29665915ea90276df99d02b99b5a05afebda87f85cdce15b0f37620aec9cd7f5"
+    },
+    "firmware/iphone-ble-signer/assets/feature_squads_preview.png": {
+      "mode": "100644",
+      "sha256": "c301c37c8080571993b7e7537183b1e0fb7687b5d6b8f4fc66a22269efdcc0bb"
+    },
+    "firmware/iphone-ble-signer/assets/feature_stake_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "9ff669b7c0b9b47ffde0dcd6fceaeb465afdd99816f1ac8feb9d754447c8eae3"
+    },
+    "firmware/iphone-ble-signer/assets/feature_stake_preview.png": {
+      "mode": "100644",
+      "sha256": "9d9123774508fd89b4635d4d6830fb21871d453c94a37df506631d9cffb0a862"
+    },
+    "firmware/iphone-ble-signer/assets/feature_swap_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "6f7a807b0b78cbd62f02e2915ce6101f0b197b5c29d87d43c63b036c7463a461"
+    },
+    "firmware/iphone-ble-signer/assets/feature_swap_preview.png": {
+      "mode": "100644",
+      "sha256": "f80f293f5a62d3b841c65411d727c6608e36f97be3b261b947786d9ea7c894c1"
+    },
+    "firmware/iphone-ble-signer/assets/features_reference.png": {
+      "mode": "100644",
+      "sha256": "7a0cfd56ec387c6a9c32b6d3b93d79af5762cd3300ea16608f26683fcd2b7437"
+    },
+    "firmware/iphone-ble-signer/assets/idle_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "c85ed273040db4561661c401ca37367a7f8077693ad6573c463dcbc976772f50"
+    },
+    "firmware/iphone-ble-signer/assets/idle_preview.png": {
+      "mode": "100644",
+      "sha256": "2a38f347047f5ecb496a9a4bfd275d830e28d3cfd8d8789a6d50a9d22bc1a17c"
+    },
+    "firmware/iphone-ble-signer/assets/idle_reference.png": {
+      "mode": "100644",
+      "sha256": "542f63d63666f239ccfb121f84c0ba07c7104d53aa7e3e7a98373088b3d10eed"
+    },
+    "firmware/iphone-ble-signer/assets/locked_standby_128x160.preview.png": {
+      "mode": "100644",
+      "sha256": "d5c9df0c75b296a879bf11ee259bd423ab01b5fd4a4dc9940a54ddec308f83b3"
+    },
+    "firmware/iphone-ble-signer/assets/locked_standby_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "81f5c69e38a8eb0e4081ff54d5e65930d9ca62c10ea2904573a2bb49a757956c"
+    },
+    "firmware/iphone-ble-signer/assets/pin_background_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "548beb52b362a914efc008814cf0b94867855e67571c9490154a571fc32d398d"
+    },
+    "firmware/iphone-ble-signer/assets/pin_background_preview.png": {
+      "mode": "100644",
+      "sha256": "3d81af0b196836af34b61c352a2fe2f67184bfa87862e1be9500cacc8afcb13e"
+    },
+    "firmware/iphone-ble-signer/assets/pin_reference.png": {
+      "mode": "100644",
+      "sha256": "e126f334ea0aa2b6070892b9d17ef8e8b0137b12533b321eb94ca67d6caff87b"
+    },
+    "firmware/iphone-ble-signer/assets/screensaver_still_128x160.preview.png": {
+      "mode": "100644",
+      "sha256": "6af89dee45900c4c506e51932da76224a539f3d9c752c026e83286c176c01f3c"
+    },
+    "firmware/iphone-ble-signer/assets/screensaver_still_128x160.rgb565": {
+      "mode": "100644",
+      "sha256": "81f5c69e38a8eb0e4081ff54d5e65930d9ca62c10ea2904573a2bb49a757956c"
+    },
+    "firmware/iphone-ble-signer/build.rs": {
+      "mode": "100644",
+      "sha256": "4dd1dbc4cc54b953e1a1a903cefa696a7b7a5b5e4829aec411460bbd36099560"
+    },
+    "firmware/iphone-ble-signer/diagnsotic.md": {
+      "mode": "100644",
+      "sha256": "bf9f65edb538762fc10816ba8784869baf8084c91c28f613213a2a6a261787e1"
+    },
+    "firmware/iphone-ble-signer/docs/ble-proof-plan.md": {
+      "mode": "100644",
+      "sha256": "7c157b525ff7ea14b802a6163dccb74c0f3f3bf408359093d2dc61cbc0c3f85e"
+    },
+    "firmware/iphone-ble-signer/docs/dual-element-board-review.md": {
+      "mode": "100644",
+      "sha256": "5668e5bc88d9b33a3a9a8f975621bf9335a9f1b281a6c765d319a2fc848cc642"
+    },
+    "firmware/iphone-ble-signer/partitions/unified_wallet_4mb.csv": {
+      "mode": "100644",
+      "sha256": "165e17d882163a10ed0ae335950968dd29a90cfb007187cbf68f31780c98ca0b"
+    },
+    "firmware/iphone-ble-signer/rust-toolchain.toml": {
+      "mode": "100644",
+      "sha256": "6cf0a2df390965b31e8fb2ef2a15cdf5811ddc7f6dfa50f8ba0f749a618cc1ca"
+    },
+    "firmware/iphone-ble-signer/scripts/cargo-flash.sh": {
+      "mode": "100755",
+      "sha256": "991d7291d6ba155ab1af97976d59fcd909d721e54e5a45e334451bc71087ef42"
+    },
+    "firmware/iphone-ble-signer/scripts/flash_factory_test.sh": {
+      "mode": "100755",
+      "sha256": "1f118f8f2336d2a5c6852aad4c34215f1d80f3226f5d512d491aabc465f7cd78"
+    },
+    "firmware/iphone-ble-signer/scripts/flash_se050_dev.sh": {
+      "mode": "100755",
+      "sha256": "142f08a669a44e37cdb1be3205dbe013e2058423ac59246918b3618c835959e5"
+    },
+    "firmware/iphone-ble-signer/scripts/pin_background.py": {
+      "mode": "100644",
+      "sha256": "5b32a661e5554c53bcac605633a540eee6969756dfe3055877312bf5bf57930d"
+    },
+    "firmware/iphone-ble-signer/scripts/prepare_bootloader.py": {
+      "mode": "100644",
+      "sha256": "ae16331da23e6a07a6281f87ea7596b39bb84ed63b24df0e46b3546f22baad05"
+    },
+    "firmware/iphone-ble-signer/scripts/ui_assets.py": {
+      "mode": "100644",
+      "sha256": "5abf7b08d010c018fedacb355738609d5ba2aaab6ea3466fcaa8667b983f6298"
+    },
+    "firmware/iphone-ble-signer/sdkconfig.defaults": {
+      "mode": "100644",
+      "sha256": "5d52c199d5882d41763931c98ed793c30af6db90db080ed7fefe0778fd03e9a9"
+    },
+    "firmware/iphone-ble-signer/src/bin/iphone_ble_wallet.rs": {
+      "mode": "100644",
+      "sha256": "6c9265475435171fa5056360848ff0762446e0e9bee83bd9a5a6758b003858bf"
+    },
+    "firmware/iphone-ble-signer/src/bin/peripheral_probe.rs": {
+      "mode": "100644",
+      "sha256": "eb41f0d936ebd79bb4a8914d554c94faa6f1a8067f4eeda947097f586cc28b6f"
+    },
+    "firmware/iphone-ble-signer/src/ble_session.rs": {
+      "mode": "100644",
+      "sha256": "1a83f54bef5ee4a0e8abba13d97b1b7f096bfc744615a2e13cca2a4f09114b72"
+    },
+    "firmware/iphone-ble-signer/src/ble_transport.rs": {
+      "mode": "100644",
+      "sha256": "c21718a5bf6407260df3bc413c20f6b79f034edcf505172051f46233df756d56"
+    },
+    "firmware/iphone-ble-signer/src/ble_tx.rs": {
+      "mode": "100644",
+      "sha256": "4f99b82f361e5b9490eb37e59335a3b589d66fc24690e65cadd3e50d81c7d448"
+    },
+    "firmware/iphone-ble-signer/src/board.rs": {
+      "mode": "100644",
+      "sha256": "dba9f14189db1afb3e162de10e0a6c8f293d19870a051e8861c98c15e032fdc8"
+    },
+    "firmware/iphone-ble-signer/src/build_info.rs": {
+      "mode": "100644",
+      "sha256": "b17432f645b3e3db073165fa536f7da5ab5e83b4629944257ceae7c630cebe6b"
+    },
+    "firmware/iphone-ble-signer/src/display.rs": {
+      "mode": "100644",
+      "sha256": "7ed5a408feb59d1141f032729273eec6dd1c75bc97698cbf7b8e86acfad64359"
+    },
+    "firmware/iphone-ble-signer/src/io_budget.rs": {
+      "mode": "100644",
+      "sha256": "dfeea52772b256c3018e2f5bde713f99e87107220eb4bf190155a887bc880ddb"
+    },
+    "firmware/iphone-ble-signer/src/local_ui.rs": {
+      "mode": "100644",
+      "sha256": "67c59fa3aee86f95ad7a7fb766e2ff1b98b7c83dab25c45a7b86e4cc477d8411"
+    },
+    "firmware/iphone-ble-signer/src/main.rs": {
+      "mode": "100644",
+      "sha256": "18090c620e6fe43e15ccce91de0519783af00b33e3379f3b1f9bda7b498b20af"
+    },
+    "firmware/iphone-ble-signer/src/pairing_lifecycle.rs": {
+      "mode": "100644",
+      "sha256": "c209fadefd99c97a9fb5ef967a422e1bd9c22d830cf30b7e1308dc4fcbeea6bb"
+    },
+    "firmware/iphone-ble-signer/src/review_ui.rs": {
+      "mode": "100644",
+      "sha256": "2582562d905abdb435eb8042ec19e71e50baa2514c2c81182534dd12db4a48cf"
+    },
+    "firmware/iphone-ble-signer/src/se050.rs": {
+      "mode": "100644",
+      "sha256": "c2246262e18314f73bc31332f8b4fa74a3c2e5eb28c0b5a028cc24c909726c17"
+    },
+    "firmware/iphone-ble-signer/src/se050_auth.rs": {
+      "mode": "100644",
+      "sha256": "458708ca18b9872dcd6fc324f0ae713e85c64ff5a2b0d216be89fe8dd5d03d69"
+    },
+    "firmware/iphone-ble-signer/src/se050_key_lifecycle.rs": {
+      "mode": "100644",
+      "sha256": "babe835051aa11d3d39c996c0dbd9d809e55d1d4b8dfbf6559d0f5868ed0bc31"
+    },
+    "firmware/iphone-ble-signer/src/se050_policy.rs": {
+      "mode": "100644",
+      "sha256": "451c1956ad0db8d64eb71257bbb3109dac59abebdfd1ec28ee2ea7c0158c646a"
+    },
+    "firmware/iphone-ble-signer/src/signing_review.rs": {
+      "mode": "100644",
+      "sha256": "ca7d72416a704e84d6eef973a9fd88ae4c6a8a0570b6110a35def553d1d43beb"
+    },
+    "firmware/iphone-ble-signer/src/transaction_verify.rs": {
+      "mode": "100644",
+      "sha256": "4c01966ea66bdc4ea744315f6e2943ab23f54b074476e58437bb8e24bd3b17c9"
+    },
+    "firmware/iphone-ble-signer/src/transport_frame.rs": {
+      "mode": "100644",
+      "sha256": "f680f4b072e1191345131c04422a747d8108485b7c0069242923914442b0175b"
+    },
+    "firmware/iphone-ble-signer/src/tropic.rs": {
+      "mode": "100644",
+      "sha256": "f1fddf462edf3c26be2089e0754f8fcb1e0b22feaab9fa806dbb988e8562f677"
+    },
+    "firmware/iphone-ble-signer/src/tropic_access.rs": {
+      "mode": "100644",
+      "sha256": "154cccb697656422880c6bccfac22cacb4cd0e232919cc6b44f5d8a0bd7edd02"
+    },
+    "firmware/iphone-ble-signer/src/tropic_l2.rs": {
+      "mode": "100644",
+      "sha256": "809815025e799df386f092e76456840bb1a9a724ae6f2ba9cdecfeab8b98199f"
+    },
+    "firmware/iphone-ble-signer/src/usb_host.rs": {
+      "mode": "100644",
+      "sha256": "11fc0245937d0049e65ffd3d6d925a4c08efa22609695900601fd900929e35e7"
+    },
+    "firmware/iphone-ble-signer/src/usb_session.rs": {
+      "mode": "100644",
+      "sha256": "5df0d7ea9b8c86ade057b41c35c6738c939d614bf48e3da521b19f54fd59ef0f"
+    },
+    "firmware/iphone-ble-signer/src/wallet_permissions.rs": {
+      "mode": "100644",
+      "sha256": "33ee1d82409d274cd272f74c4a8ce7dabd6284c44da2bcbca1cd1a7650de8e0b"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.cargo-ok": {
+      "mode": "100644",
+      "sha256": "afbf9d0f3560b0fd7795e81c42a0a79ee6b6fc67e064f77826aee642cad28d91"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.cargo_vcs_info.json": {
+      "mode": "100644",
+      "sha256": "39b25ba80363b216c8ed3a73fd35fc7e1cd58b22522304344dbfa2b8c7225b96"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.github/workflows/rust.yml": {
+      "mode": "100644",
+      "sha256": "894e6a1112b6876ad64af3e906818e8d55a6b11e73bd4a1755ec20a9aac6d06d"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/.gitignore": {
+      "mode": "100644",
+      "sha256": "706b35f8f9d5535091150bd6f0f2f09a67663872c6458afc0cc1b2e88ed6f01c"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/Cargo.toml": {
+      "mode": "100644",
+      "sha256": "4c4b7c022ab923a8820ece4aba511939a862e4305e0804fa71e6540c5a49f079"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/Cargo.toml.orig": {
+      "mode": "100644",
+      "sha256": "94a0dde25fe74e029a81be1ce2be5b301cab442d01bc209569b2ca340fdffa83"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/LICENSE": {
+      "mode": "100644",
+      "sha256": "2413f1809e287ef4638287bb7dc70ee63f12b7965011fe2515b174b86e47ce72"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/README.md": {
+      "mode": "100644",
+      "sha256": "9a62d676fe825bead77add5a25b821ad772428dc5e187a4c63889b017d2e3fea"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/src/instruction.rs": {
+      "mode": "100644",
+      "sha256": "9df5119ac6402bb5bf6c8e5f45f6153fad455e40b889e40fe6367c32eaa7eeba"
+    },
+    "firmware/iphone-ble-signer/vendor/st7735-lcd/src/lib.rs": {
+      "mode": "100644",
+      "sha256": "7705f2f643d3001544149d687fcb23cd84c41f4a840cefacc86d5a7834661598"
+    },
+    "tools/firmware-host-tests/.gitignore": {
+      "mode": "100644",
+      "sha256": "306fd52e74fca6746e12acc750f232de15e71da917756a1270d74c91f5eb7368"
+    },
+    "tools/firmware-host-tests/Cargo.lock": {
+      "mode": "100644",
+      "sha256": "5f6517431ceb2e7097839a9a2b040fd4a0617377c99116a4bd401d6aa4d0f6d7"
+    },
+    "tools/firmware-host-tests/Cargo.toml": {
+      "mode": "100644",
+      "sha256": "07c2a2386c6a46c41d6fc3619ac4a728c91da789422b35b7ab92c3a46115f861"
+    },
+    "tools/firmware-host-tests/README.md": {
+      "mode": "100644",
+      "sha256": "669fd5e11ac0e8cc1dfbc5ff6c51c826633d8fb471e10859d820d0c92d8a2ddf"
+    },
+    "tools/firmware-host-tests/examples/render_review.rs": {
+      "mode": "100644",
+      "sha256": "dce6d845e7dfcc967b73b27474c30bdf911169f56b2e88443f93d079c95a20df"
+    },
+    "tools/firmware-host-tests/src/lib.rs": {
+      "mode": "100644",
+      "sha256": "7f39f584d0d125fb2f45797363a67c46697141d98741f56837552b891301b412"
+    },
+    "tools/firmware-host-tests/tests/display_io.rs": {
+      "mode": "100644",
+      "sha256": "6554730ee957fe4dc7aadb1122451240128a36d30d5f6479372610c60456b5ff"
+    },
+    "tools/firmware-lot/README.md": {
+      "mode": "100644",
+      "sha256": "bb5d649f65ff3e38782cd1ded1553a4981736fcf86d2ee0b47ba295b97df517a"
+    },
+    "tools/firmware-lot/lot_report.py": {
+      "mode": "100644",
+      "sha256": "740ed8fe893024c3867ba909efba494726f7a18b74b8a0df0806a5a0a88559c1"
+    },
+    "tools/firmware-lot/test_lot_report.py": {
+      "mode": "100644",
+      "sha256": "4ccd89b91912f174ce7289f70e5cf31b6bc5abf26c64cd4ded58122fb995c97e"
+    },
+    "tools/firmware-production/README.md": {
+      "mode": "100644",
+      "sha256": "8e5a5bddb59f1ce6431b35f43240310ae75d28b5e4c1a8c8ae105aa8921773b8"
+    },
+    "tools/firmware-production/factory.py": {
+      "mode": "100644",
+      "sha256": "b43c407f065937f111d13fc5605b7e302724c4391f91d70538c19608dcb1e647"
+    },
+    "tools/firmware-production/package.py": {
+      "mode": "100644",
+      "sha256": "33ad6b0cc702c6d3336a5c99c6055b47ea577dab9a1f015a45e095552c14ab39"
+    },
+    "tools/firmware-production/test_factory.py": {
+      "mode": "100644",
+      "sha256": "f075178aa6d8cf0ca4c81c468f64b777fc446c787a199233b814533f3cf92ebc"
+    }
+  },
+  "owned_paths": [
+    "firmware/iphone-ble-signer",
+    "tools/firmware-host-tests",
+    "tools/firmware-production",
+    "tools/firmware-lot"
+  ],
+  "schema": 1,
+  "source_commit": "330bc465d17f5ad5c501ba335d6724b819c56edb",
+  "source_repository": "hogyzen12/unruggable-app-pure-UX",
+  "status": "source-snapshot-not-hardware-qualification"
+}

@@ -6,10 +6,14 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 ESP32_RELEASE = ROOT / "firmware/esp32-only/releases/v0.1.0"
 ESP32_MANIFEST_SHA256 = "9ac6065626db259aa41c7d9b2ac85d1e8cf51eaf24a5b3b4ad2bfb199743b52f"
+DUAL_COMMIT = "dd1f86d6633b66e203e8c78f5cd3130eb67ab98c"
+DUAL_TAG = "firmware-v0.3.3-mlh-2026"
+DUAL_MANIFEST_SHA256 = "10670a2ee95aa947c6ca6ac328fefd7502d621d8ea9b5b7b1fe610063fe1efe9"
 
 
 def sha256(data):
@@ -43,12 +47,43 @@ def verify_esp32():
     print(f"PASS: ESP32-only v0.1.0 — {len(manifest['files'])} archived files unchanged", flush=True)
 
 
+def release_git(*args):
+    result = subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True)
+    if result.returncode:
+        raise ValueError("Original V2 history/tag unavailable; run git fetch origin --unshallow --tags "
+                         "for a shallow clone, or git fetch origin --tags for a full clone")
+    return result.stdout
+
+
 def verify_dual(package):
-    command = [sys.executable, str(ROOT / "releases/mlh-2026/verify.py")]
-    if package:
-        command.extend(["--package", str(package.resolve())])
-    subprocess.run(command, check=True)
-    print("PASS: dual-element v0.3.3 — original MLH release verified", flush=True)
+    # Verify shipped V2 at its pinned commit; allow working V2 source to evolve.
+    if release_git("rev-parse", f"refs/tags/{DUAL_TAG}^{{commit}}").decode().strip() != DUAL_COMMIT:
+        raise ValueError("Original V2 release tag moved")
+    manifest_path = "releases/mlh-2026/manifest.json"
+    original = release_git("show", f"{DUAL_COMMIT}:{manifest_path}")
+    if sha256(original) != DUAL_MANIFEST_SHA256:
+        raise ValueError("Original V2 release manifest changed")
+    if checked_path(ROOT, manifest_path).read_bytes() != original:
+        raise ValueError("Preserved V2 manifest changed in the working tree")
+    verifier_path = "releases/mlh-2026/verify.py"
+    verifier = release_git("show", f"{DUAL_COMMIT}:{verifier_path}")
+    if checked_path(ROOT, verifier_path).read_bytes() != verifier:
+        raise ValueError("Preserved V2 verifier changed in the working tree")
+    manifest = json.loads(original)
+    with tempfile.TemporaryDirectory(prefix="unruggable-v033-") as temporary:
+        snapshot = Path(temporary)
+        for name in [*manifest["source_files"], manifest_path, verifier_path]:
+            relative = Path(name)
+            if relative.is_absolute() or ".." in relative.parts:
+                raise ValueError(f"Unsafe release path: {name}")
+            target = snapshot / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(release_git("show", f"{DUAL_COMMIT}:{name}"))
+        command = [sys.executable, str(snapshot / verifier_path)]
+        if package:
+            command.extend(["--package", str(package.resolve())])
+        subprocess.run(command, check=True)
+    print("PASS: dual-element v0.3.3 — immutable release verified independently of current V2 source", flush=True)
 
 
 def main():

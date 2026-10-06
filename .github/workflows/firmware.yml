@@ -1,0 +1,50 @@
+name: Firmware checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firmware-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  current-firmware:
+    name: Current V2 source and host tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          persist-credentials: false
+      - name: Install tested host toolchain
+        run: rustup toolchain install 1.92.0 --profile minimal
+      - name: Verify monorepo export
+        run: python3 tools/firmware-handoff/handoff.py verify
+      - name: Firmware logic and display tests
+        run: cargo +1.92.0 test --locked --manifest-path tools/firmware-host-tests/Cargo.toml
+      - name: Factory, lot and handoff tests
+        run: |
+          python3 -m unittest discover -s tools/firmware-production -v
+          python3 -m unittest discover -s tools/firmware-lot -v
+          python3 -m unittest discover -s tools/firmware-handoff -v
+
+  preserved-releases:
+    name: Preserved preorder and V2 releases
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify immutable release baselines independently of current V2 source
+        run: python3 firmware/verify.py

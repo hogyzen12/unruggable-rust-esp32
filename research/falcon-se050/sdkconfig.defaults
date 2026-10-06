@@ -1,0 +1,17 @@
+# The main task only orchestrates SE050 + UI; the FN-DSA worker gets its own stack.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=65536
+
+# Hardware is ESP32-S3-MINI-1-N8 (8MB flash). Keep image header and flasher config aligned.
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_HEADER_FLASHSIZE_UPDATE=y
+
+# Firmware has grown; use the built-in larger single-app table (1500K app slot).
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# Use this to set FreeRTOS kernel tick frequency to 1000 Hz (100 Hz by default).
+# This allows to use 1 ms granularity for thread sleeps (10 ms by default).
+#CONFIG_FREERTOS_HZ=1000
+
+# Workaround for https://github.com/espressif/esp-idf/issues/7631
+#CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=n
+#CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=n

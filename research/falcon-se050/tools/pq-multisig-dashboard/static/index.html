@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PQ Multisig Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">PQ Multisig</p>
+          <h1>Operator Dashboard</h1>
+          <p class="lede">
+            Read chain state, inspect proposals, and prepare local CLI manifests
+            without moving Falcon signing into the browser.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="health-button" type="button">Check Health</button>
+          <span id="health-status" class="status-pill muted">Not checked</span>
+        </div>
+      </section>
+
+      <section class="card grid">
+        <div class="panel">
+          <h2>Connection</h2>
+          <label>RPC URL <input id="rpc-url" value="http://127.0.0.1:8899" /></label>
+          <label>Vector Program ID <input id="vector-program-id" value="FaLCn556dZWXHTXvkzVsieWfrvfZTki8rkFeHxaP8btU" /></label>
+          <label>Vault Program ID <input id="vault-program-id" value="9v16YaZYWXrMdVjGnhFQTE9yHerSchNJg18bqSCZUF52" /></label>
+          <label>Fee Payer File <input id="fee-payer-file" placeholder="Optional for reads, required for manifests" /></label>
+          <label>Aliases File <input id="aliases-file" value="./docs/pq-multisig-ops.aliases.example.json" /></label>
+          <div class="row">
+            <button id="load-aliases" type="button">Load Aliases</button>
+            <span id="alias-status" class="status-pill muted">No aliases loaded</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Scope</h2>
+          <label>Vault Alias
+            <select id="vault-alias">
+              <option value="">Select vault alias</option>
+            </select>
+          </label>
+          <label>Vault Seed <input id="vault-seed" placeholder="Optional if using vault alias" /></label>
+          <label>Vault PDA <input id="vault-pda" placeholder="Optional if using vault alias or seed" /></label>
+          <label>Member Alias
+            <select id="member-alias">
+              <option value="">Select member alias</option>
+            </select>
+          </label>
+          <label>Member PDA <input id="member-pda" placeholder="Optional if using member alias" /></label>
+          <div class="row">
+            <button id="refresh-vault" type="button">Refresh Vault</button>
+            <button id="refresh-proposals" type="button">Refresh Proposals</button>
+            <button id="prepare-accept" type="button">Prepare Accept</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card grid">
+        <div class="panel">
+          <h2>Queues</h2>
+          <div class="filter-grid">
+            <label>State
+              <select id="state-filter">
+                <option value="active">active</option>
+                <option value="executed">executed</option>
+                <option value="cancelled">cancelled</option>
+                <option value="expired">expired</option>
+                <option value="all" selected>all</option>
+              </select>
+            </label>
+            <label>Queue
+              <select id="queue-filter">
+                <option value="all" selected>all</option>
+                <option value="needs-approval">needs-approval</option>
+                <option value="executable">executable</option>
+                <option value="closable">closable</option>
+              </select>
+            </label>
+            <label>Action Kind
+              <select id="action-kind-filter">
+                <option value="all" selected>all</option>
+                <option value="sol-withdraw">sol-withdraw</option>
+                <option value="spl-transfer">spl-transfer</option>
+                <option value="config-update">config-update</option>
+                <option value="replace-member">replace-member</option>
+              </select>
+            </label>
+          </div>
+          <div id="proposal-meta" class="meta"></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>State</th>
+                  <th>Queue</th>
+                  <th>Kind</th>
+                  <th>Approvals</th>
+                  <th>Summary</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="proposal-rows">
+                <tr><td colspan="7" class="muted">No proposals loaded</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Vault</h2>
+          <pre id="vault-json" class="code-block muted">Vault JSON will appear here.</pre>
+        </div>
+      </section>
+
+      <section class="card grid">
+        <div class="panel">
+          <h2>Proposal Detail</h2>
+          <pre id="proposal-json" class="code-block muted">Select a proposal to inspect it.</pre>
+        </div>
+        <div class="panel">
+          <h2>Prepared Manifest</h2>
+          <div class="row">
+            <button id="copy-manifest-command" type="button">Copy CLI Command</button>
+            <button id="copy-manifest-json" type="button">Copy Manifest JSON</button>
+          </div>
+          <pre id="manifest-json" class="code-block muted">Prepare an action to generate a manifest.</pre>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+  </html>

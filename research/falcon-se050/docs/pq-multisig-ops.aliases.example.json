@@ -1,0 +1,28 @@
+{
+  "vaults": {
+    "dev-vault": {
+      "seed": "ops-localnet-v1"
+    },
+    "mainnet-team": {
+      "pubkey": "ReplaceWithVaultPda111111111111111111111111111111"
+    }
+  },
+  "members": {
+    "alice": {
+      "vector_pda": "ReplaceWithAliceVectorPda11111111111111111111111",
+      "fixture_file": "/tmp/pq-multisig/alice.json"
+    },
+    "bob": {
+      "vector_pda": "ReplaceWithBobVectorPda111111111111111111111111",
+      "fixture_file": "/tmp/pq-multisig/bob.json"
+    },
+    "carol": {
+      "vector_pda": "ReplaceWithCarolVectorPda11111111111111111111111",
+      "fixture_file": "/tmp/pq-multisig/carol.json"
+    },
+    "dave": {
+      "vector_pda": "ReplaceWithDaveVectorPda111111111111111111111111",
+      "fixture_file": "/tmp/pq-multisig/dave.json"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[package]
+name = "hybrid-harness"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+base64 = "0.22"
+bs58 = "0.5"
+ed25519-dalek = { version = "2.1.1", default-features = false, features = ["std"] }
+fn-dsa = "0.3"
+sha2 = "0.10"
+serialport = "4.8"
+solana-falcon512 = { path = "../../solana-falcon512" }

@@ -1,0 +1,44 @@
+[package]
+name = "solana-falcon512"
+version = "0.1.2"
+edition = "2024"
+description = "Pure-Rust Falcon-512 signature verification, optimised for Solana SBF programs."
+repository = "https://github.com/blueshift-gg/solana-falcon512"
+license = "MIT"
+keywords = ["falcon", "post-quantum", "signature", "solana", "no-std"]
+categories = ["cryptography", "no-std"]
+readme = "README.md"
+
+# Keep the published tarball lean. Maintainer-only sources — Rust unit
+# tests, Kani harnesses, the spec-pin and Miri shims — live under
+# `internal-tests/` and are pulled into the lib via `#[cfg(test)] #[path
+# = "../internal-tests/<name>.rs"]` declarations. Excluding that
+# directory plus the Lean proofs, proptest regressions, and CI config
+# trims the tarball to just the production sources. `cargo test` on the
+# *published* tarball won't compile (test files are absent by design) —
+# tests are intended to run from the git checkout.
+exclude = [
+    "internal-tests",
+    "formal_verification",
+    "proptest-regressions",
+    ".github",
+]
+
+[lib]
+crate-type = ["rlib"]
+
+[workspace]
+members = [
+    "host-tests",
+    "program"
+]
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(kani)'] }
+
+[dependencies]
+solana-program-error = "3.0.1"
+
+[dev-dependencies]
+proptest = "1"
+sha3 = "0.10"

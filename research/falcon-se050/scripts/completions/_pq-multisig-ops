@@ -1,0 +1,73 @@
+#compdef pq-multisig-ops ./scripts/run_pq_multisig_ops.sh
+
+local -a modes states queues action_kinds common_flags
+
+modes=(
+  generate-member-fixture
+  initialize-vector
+  init-vault
+  show-vault
+  list-proposals
+  show-proposal
+  create-sol-withdraw
+  create-spl-transfer
+  create-config-update
+  create-replace-member
+  approve
+  revoke
+  cancel
+  accept-pending-member
+  execute
+  close
+)
+
+states=(active executed cancelled expired all)
+queues=(all needs-approval executable closable)
+action_kinds=(sol-withdraw spl-transfer config-update replace-member all)
+
+_arguments -s \
+  '--mode[operation mode]:mode:('"$modes"')' \
+  '--rpc-url[Solana RPC URL]:rpc url:' \
+  '--fee-payer-file[fee payer keypair file]:file:_files' \
+  '--vector-program-id[Vector program id]:pubkey:' \
+  '--vault-program-id[PQ vault program id]:pubkey:' \
+  '--commitment[RPC commitment]:commitment:(processed confirmed finalized)' \
+  '--json[emit machine-readable JSON for read modes]' \
+  '--manifest-file[write manifest JSON to path]:file:_files' \
+  '--manifest-only[emit manifest and exit without executing]' \
+  '--aliases-file[alias file path]:file:_files' \
+  '--vault[vault PDA]:pubkey:' \
+  '--vault-seed[vault seed bytes]:seed:' \
+  '--vault-alias[vault alias]:alias:' \
+  '--member[member Vector PDA]:pubkey:' \
+  '--member-alias[member alias]:alias:' \
+  '--proposal-id[proposal id]:proposal id:' \
+  '--state[proposal state filter]:state:('"$states"')' \
+  '--queue[proposal queue filter]:queue:('"$queues"')' \
+  '--action-kind[action-kind filter]:action kind:('"$action_kinds"')' \
+  '--threshold[threshold]:threshold:' \
+  '--proposal-ttl-slots[proposal ttl slots]:ttl:' \
+  '--timelock-slots[timelock slots]:timelock:' \
+  '--vault-members[csv member list]:members:' \
+  '--receiver[SOL withdraw receiver]:pubkey:' \
+  '--lamports[withdraw amount in lamports]:lamports:' \
+  '--spl-mint[SPL mint]:pubkey:' \
+  '--spl-destination[SPL destination ATA]:pubkey:' \
+  '--spl-amount[SPL amount]:amount:' \
+  '--spl-decimals[SPL decimals]:decimals:' \
+  '--replace-member-index[member index to replace]:index:' \
+  '--new-member-pda[new member vector PDA]:pubkey:' \
+  '--new-member-alias[new member alias]:alias:' \
+  '--proposal-offset-slots[proposal offset slots]:slots:' \
+  '--not-before-slot[explicit not-before slot]:slot:' \
+  '--expires-at-slot[explicit expiry slot]:slot:' \
+  '--member-fixture-file[fixture file]:file:_files' \
+  '--output-file[output file]:file:_files' \
+  '--overwrite[overwrite existing output file]' \
+  '--port[serial port]:port:' \
+  '--pin[device pin]:pin:' \
+  '--read-timeout-ms[read timeout ms]:ms:' \
+  '--action-timeout-ms[action timeout ms]:ms:' \
+  '--open-wait-ms[serial open wait ms]:ms:' \
+  '--no-auto-init[disable automatic vector init]' \
+  '(-h --help)'{-h,--help}'[show help]'

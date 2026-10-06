@@ -1,0 +1,21 @@
+[package]
+name = "host-tests"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+# This crate exists only to host integration tests for `solana-falcon512`
+# without polluting the main crate's dev-dependencies (pqcrypto-falcon, etc.).
+# All tests live under `tests/` and are run via `cargo test -p host-tests`
+# (or just `cargo test` from the workspace root).
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+solana-falcon512 = { path = ".." }
+
+[dev-dependencies]
+pqcrypto-falcon = "0.4"
+pqcrypto-traits = "0.3"
+rayon = "1"

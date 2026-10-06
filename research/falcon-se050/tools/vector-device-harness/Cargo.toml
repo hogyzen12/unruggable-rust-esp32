@@ -1,0 +1,14 @@
+[package]
+name = "vector-device-harness"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "=1.0.102"
+base64 = "=0.22.1"
+ed25519-dalek = { version = "=2.2.0", default-features = false, features = ["std"] }
+hex = "=0.4.3"
+serialport = "=4.9.0"
+sha2 = "=0.10.9"
+solana-falcon512 = { path = "../../solana-falcon512" }
+solana-pubkey = { version = "=4.0.0", default-features = false, features = ["std", "sha2", "curve25519"] }

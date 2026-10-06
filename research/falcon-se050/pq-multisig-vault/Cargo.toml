@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "program",
+]
+default-members = [
+    "crates/core",
+    "program",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+pinocchio = "0.11.0"
+pinocchio-system = "0.6.1"
+solana-address = "2.6.0"
+solana-instruction = "3.4.0"
+solana-nostd-sha256 = "0.2.0"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1

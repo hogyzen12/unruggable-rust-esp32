@@ -1,0 +1,15 @@
+[package]
+name = "vector-falcon-interop"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+fn-dsa-comm = "0.3"
+fn-dsa-kgen = "0.3"
+fn-dsa-sign = { version = "0.3", features = ["small_context"] }
+fn-dsa-vrfy = "0.3"
+hex = "0.4"
+rand_core = { version = "0.6", default-features = false, features = ["getrandom"] }
+sha2 = "0.10"
+solana-falcon512 = { path = "../../solana-falcon512" }

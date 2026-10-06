@@ -1,0 +1,25 @@
+[package]
+name = "pq-multisig-harness"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "=1.0.102"
+hex = "=0.4.3"
+pqcrypto-falcon = "=0.4.1"
+pqcrypto-traits = "=0.3.5"
+sha2 = "=0.10.9"
+solana-commitment-config = "=3.1.1"
+solana-falcon512 = { path = "../../solana-falcon512" }
+solana-instruction = { version = "=3.1.0", default-features = false, features = ["std"] }
+solana-instructions-sysvar = "=3.0.0"
+solana-keypair = "=3.1.2"
+solana-program-pack = "=3.0.0"
+solana-pubkey = { version = "=3.0.0", default-features = false, features = ["std", "sha2", "curve25519"] }
+solana-rpc-client = "=3.1.14"
+solana-signature = { version = "=3.3.0", default-features = false, features = ["std", "verify"] }
+solana-signer = "=3.0.0"
+solana-system-interface = { version = "=2.0.0", features = ["bincode"] }
+solana-transaction = { version = "=3.0.2", features = ["bincode"] }
+spl-associated-token-account-interface = "=2.0.0"
+spl-token-interface = "=2.0.0"

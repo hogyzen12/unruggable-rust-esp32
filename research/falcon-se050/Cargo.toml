@@ -1,0 +1,72 @@
+[package]
+name = "esp32-solana-signer"
+version = "0.1.0"
+authors = ["hogyzen12 <billypapas12@gmail.com>"]
+edition = "2021"
+resolver = "2"
+rust-version = "1.90"
+autobins = false
+
+[[bin]]
+name = "esp32-solana-signer"
+path = "src/main.rs"
+harness = false
+
+[[bin]]
+name = "peripheral_probe"
+path = "src/bin/peripheral_probe.rs"
+harness = false
+
+[[bin]]
+name = "display_smoke"
+path = "src/bin/display_smoke.rs"
+harness = false
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true
+opt-level = "z"
+
+[dependencies]
+log = "0.4"
+esp-idf-svc = { version = "0.51", features = ["critical-section", "binstart"] }
+embedded-svc = { version = "0.28", default-features = false }
+anyhow = "1.0"
+ed25519-dalek = { version = "2.1.1", default-features = false, features = ["rand_core"] }
+rand_core = { version = "0.6", default-features = false, features = ["getrandom"] }
+getrandom = { version = "0.2", features = ["custom"] }
+esp-idf-sys = { version = "0.36.1", features = ["binstart"] }
+bs58 = "0.5"
+base64 = "0.22"
+sha2 = "0.10.9"
+pbkdf2 = "0.12"
+aes-gcm = "0.10"
+zeroize = "1.8"
+fn-dsa-comm = "0.3"
+fn-dsa-kgen = "0.3"
+fn-dsa-sign = { version = "0.3", features = ["small_context"] }
+fn-dsa-vrfy = "0.3"
+data-encoding = "2.9"
+hmac = "0.12"
+sha1 = "0.10"
+subtle = "2.5"
+embedded-graphics = "0.8"
+ssd1306 = "0.10"
+st7735-lcd = "0.10.0"
+qrcodegen = "1"
+display-interface = "0.5"
+display-interface-spi = "0.5"
+ili9341 = "0.6"
+mipidsi = "0.9.0"
+hex = "0.4.3"
+zerocopy = "0.8.33"
+x25519-dalek = { version = "2.0.1", features = ["static_secrets"] }
+esp-idf-hal = "0.45"
+
+[build-dependencies]
+embuild = "0.33"
+
+[patch.crates-io]
+st7735-lcd = { path = "vendor/st7735-lcd" }

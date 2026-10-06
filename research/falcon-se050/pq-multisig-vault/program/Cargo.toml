@@ -1,0 +1,15 @@
+[package]
+name = "pq-multisig-vault-program"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Falcon-gated T-of-N multisig vault for Solana"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+pinocchio = { workspace = true }
+pinocchio-system = { workspace = true }
+solana-address = { workspace = true }
+solana-nostd-sha256 = { workspace = true }

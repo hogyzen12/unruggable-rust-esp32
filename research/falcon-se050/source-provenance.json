@@ -1,0 +1,1307 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-06",
+  "kind": "Recovered development source, not a qualified firmware release",
+  "original_checkout": "unruggable-rust-esp32/esp32-solana-signer",
+  "original_branch": "feature/display-improvements",
+  "original_head": "08ba8662041ae037b7fc3bba9e63d35497b4016a",
+  "original_working_tree_dirty": true,
+  "hardware_and_onchain_tests_rerun_during_archival": false,
+  "nested_repositories": {
+    "solana-falcon512": {
+      "upstream": "https://github.com/blueshift-gg/solana-falcon512.git",
+      "base_commit": "ed456633dc281e313d2d0c99557bfaadf544d093",
+      "locally_modified_files": []
+    },
+    "vector": {
+      "upstream": "https://github.com/blueshift-gg/vector.git",
+      "base_commit": "c12ee66808a42d56c7bb5ac75887a36d1470ce1a",
+      "locally_modified_files": [
+        "Readme.md",
+        "crates/core/src/schemes/falcon512.rs",
+        "package.json",
+        "programs/falcon512/src/lib.rs",
+        "sdk/ts/src/schemes/falcon512.ts"
+      ]
+    }
+  },
+  "files": {
+    ".cargo/config.toml": {
+      "sha256": "2d37345431a0dab127e59e0140b20e61a98eef291d29bbff19bb66761964a033",
+      "bytes": 389,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "Cargo.lock": {
+      "sha256": "f16c10d237f084565a3a7f0311390ffe8928af8d62d0c053178353faecf10333",
+      "bytes": 60882,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "Cargo.toml": {
+      "sha256": "26798df0b748b3a39e9a37d0682416372c14fcb41ed57bb6a0e99a7450512c58",
+      "bytes": 1656,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "PATH_B_APDU_NOTES.md": {
+      "sha256": "91d5fce05b984bc983992b44d2133f4c542501b3841668913736aba2bb8e2a68",
+      "bytes": 3073,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "assets/screensaver_still_128x160.rgb565": {
+      "sha256": "bb47f65547eca3e3579f1b0608d6af651bfdda1c4fb8e3061f235fb60e527750",
+      "bytes": 40960,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "build.rs": {
+      "sha256": "09c9e6cef3f66e5baa87955af3d26465a7316630e311266f93989ef9074d036a",
+      "bytes": 118,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "buildnflash.md": {
+      "sha256": "6d87b63e0961b9b14164ad25c5a10036644f6711087326e21c3a34c1903fef26",
+      "bytes": 16496,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "a9274d229e0e114fbf990aaa92ba06db6579fe7a0fa3be0d9db93630f959e1d8",
+      "original_bytes": 16502
+    },
+    "checkpoint/2026-06-07-hybrid-hello-ok/README.md": {
+      "sha256": "f1a0bf603557bb9859ec1756b1f8f1199e2305051bff37021789f97c80fbfaf3",
+      "bytes": 586,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "cdd4ac3b0fa2d9c54ecc62cf53b4a62f91fe5a67088409f41440b65b8571a144",
+      "original_bytes": 587
+    },
+    "checkpoint/2026-06-07-hybrid-hello-ok/buildnflash.md": {
+      "sha256": "e38639a478f8fe6de02bb8059554883f514e32207608ff54e90a0d87c8095e0b",
+      "bytes": 1861,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "64c4247f5cbc3d22d38350b2400c8a0e6d8dcff08f97c378b1361ca5f1c6ab92",
+      "original_bytes": 1864
+    },
+    "checkpoint/2026-06-07-se050-long-message-probe/README.md": {
+      "sha256": "62f60e9cb40e36f9c1e2cb9b1a089360fe71768ab03c49612d70ffe18a4760d2",
+      "bytes": 1418,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-07-vector-device-harness-ok/README.md": {
+      "sha256": "8562ec39a58b6af52389043bca20c54116c85ee0946f0bd81698ba6f65d15186",
+      "bytes": 1879,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "5ced5c7fbae53a568466d2eb5826c81c9b20d690b8e108ce79678248e7031d0b",
+      "original_bytes": 1882
+    },
+    "checkpoint/2026-06-07-vector-device-harness-ok/buildnflash.md": {
+      "sha256": "001875b5b58f58d54c8358d030dd67be8797313dd3e62e36ad18f94aa0fdce95",
+      "bytes": 2807,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "7ec3d6864702ece7bff8ca326573753e0db4ecfcbb080513b41674839124fb8c",
+      "original_bytes": 2813
+    },
+    "checkpoint/2026-06-07-vector-device-harness-ok/docs/vector-falcon-transaction-model.md": {
+      "sha256": "6ed6e47b0df21ed0b8b126c69b0eba69916e561026d95997b5e6efd588522f14",
+      "bytes": 2886,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-07-vector-localnet-e2e/README.md": {
+      "sha256": "13a97038f7c29f0bd9164576f425121bdacfb3510803fd9a98bf86378559f42c",
+      "bytes": 2665,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "fed23f263abe625f48bb296b461be1ca5875f4649e29de0f33c8cbaa381a60c1",
+      "original_bytes": 2666
+    },
+    "checkpoint/2026-06-07-vector-localnet-spl-transfer-ok/README.md": {
+      "sha256": "3a02df21a64bd51063729daf7d6ec3ca5b8d20f7bcbbe25f83207de48fd615da",
+      "bytes": 1718,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "72dfb5724f397ae16a641410be7333ab012a9a3102085263051b678951dfed89",
+      "original_bytes": 1719
+    },
+    "checkpoint/2026-06-07-vector-localnet-stake-ok/README.md": {
+      "sha256": "8b71728e27a57b83e7e083033e243417a1bdf3ba9cec867ba2bc6eddf2c47264",
+      "bytes": 1836,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "b9a87ce5834ee688ce04edfcb8f30968def263f12d4e045a920c43e2e8efb9b5",
+      "original_bytes": 1837
+    },
+    "checkpoint/2026-06-07-vector-localnet-withdraw-ok/README.md": {
+      "sha256": "7c5dd9d7e940605dc738bfb94d8a8b8853cc23d81c09f6b671bb7b66ef7cdaaa",
+      "bytes": 2360,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "eef7f5dd04c446297d26304323a10df33d78cbf6c2ebf98b426d8bca92c5059f",
+      "original_bytes": 2361
+    },
+    "checkpoint/2026-06-07-vector-mainnet-canaries-ok/README.md": {
+      "sha256": "0a15b64488b4c3003d1f8dfad29082293611269407880811c09883b2ca79b8cb",
+      "bytes": 1561,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-07-vector-mainnet-probe/README.md": {
+      "sha256": "c2a052db38320a8bd18255092bcac7c1954bb6237f8d1c3f5f0fa519278bf9da",
+      "bytes": 924,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-07-vector-onchain-harness/README.md": {
+      "sha256": "7be5ab3fad5927b6e53579b069f79d1ad0289d113f1e48953b8114466cfd749b",
+      "bytes": 1437,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "efdba5b64c7215e138103ae952ff726148d3b9c7d9f086f0dff8184326b94c51",
+      "original_bytes": 1439
+    },
+    "checkpoint/2026-06-07-vector-onchain-harness/buildnflash.md": {
+      "sha256": "526b1abb4679658c3ae1c30b28984ea3aca8a007329a8d1f6f0c94e2d1611629",
+      "bytes": 3641,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "a76b644c3ea29e8c75de330eb7c92ef524b86381f99fceeb81a286af91025ac1",
+      "original_bytes": 3647
+    },
+    "checkpoint/2026-06-07-vector-onchain-harness/docs/vector-falcon-transaction-model.md": {
+      "sha256": "0fa997bf59f387cbc5b044a88897ac13d99bf376c2f070338217d97bbc7ca0fe",
+      "bytes": 3552,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-08-falcon-mainnet-e2e-ok/README.md": {
+      "sha256": "5a12109a2d534746a7e2e567fda4d71798b565e74995196195673157ff5ffe5c",
+      "bytes": 2583,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-08-pq-multisig-localnet-2of3-ok/README.md": {
+      "sha256": "fdf4af5d843e7473498b9399b535e7af32fc07fbd6103d0e67f5aa184985ff60",
+      "bytes": 2209,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-08-pq-multisig-localnet-full-ok/README.md": {
+      "sha256": "3ce49fb9e366d4fa072fe1b4f81e17b227677b961cdf4d501c627a7ff54c54bc",
+      "bytes": 3026,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-08-pq-multisig-localnet-hardened-ok/README.md": {
+      "sha256": "8b5587c42d15e2c2ce27ded5429dce6c27a13d15a4487921e0e250dbe22ed7f6",
+      "bytes": 2639,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-08-pq-multisig-localnet-rotation-ok/README.md": {
+      "sha256": "19d1656b5339dcaaffa78e33164b32f6aeb2eb7a2f06ce51a5251df757c0ba46",
+      "bytes": 2607,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-08-pq-multisig-ops-localnet-async-ok/README.md": {
+      "sha256": "a80555a527a1189bf53f08915d19c264904db7b2e3592a1edc44e4e11b3b3e13",
+      "bytes": 3161,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-09-pq-multisig-dashboard-local-ok/README.md": {
+      "sha256": "6a9ec6ecdf4935bf175211419a792ff57bd267ceaa5b23f001c4b2f0fa33e42f",
+      "bytes": 1901,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-09-pq-multisig-ops-quickstart-ok/README.md": {
+      "sha256": "6b7ade961a3617dfc0da3267974a98afd355e80d5066f77bf10b8f4b568960a2",
+      "bytes": 2787,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-11-pq-multisig-falcononly-v1-ok/README.md": {
+      "sha256": "40d291366b85d2d1c0d1ee1700ce6d6862a2e82daa1c541e732f07664d05d53a",
+      "bytes": 3140,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-12-unruggable-v2-se050-bringup-ok/README.md": {
+      "sha256": "7fe477a08ba07ce461513504ae568ef6b534ebd171849dc91a0e7adb1dd70760",
+      "bytes": 3774,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "dee42dab4ae279fc21b42666bc5af785cf1455e1918a3b0dd5187996e1610b80",
+      "original_bytes": 3777
+    },
+    "checkpoint/2026-06-13-firmware-se050-wrap-v2-ok/README.md": {
+      "sha256": "6fef7162da6452ffe09d786f792169e59032ffcedb81f53d4691881efb3dcaa9",
+      "bytes": 1404,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-13-pq-multisig-hardware-localnet-e2e-ok/README.md": {
+      "sha256": "70c60a3812ba26686fe3cae32323eb12388e533c52f33292fbd2b5001674ec9d",
+      "bytes": 2351,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-13-pq-multisig-v1-review-fixes-ok/README.md": {
+      "sha256": "d6fcf634d21185ef91ab724fd98fb976c7848259827c0f852edda90304be428a",
+      "bytes": 2797,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "checkpoint/2026-06-13-unruggable-v2-button-confirm-ok/README.md": {
+      "sha256": "5e93c0e9e01bb2d8943c1e7df9fd387855cf74bc2c4068e931b83ccf19ec811d",
+      "bytes": 2021,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "f189f0e7c99fa7dfd24ef01d2d381f7a6df878cd397bf942c0b2aa66b073c033",
+      "original_bytes": 2023
+    },
+    "checkpoint/2026-06-15-pq-multisig-mainnet-tooling-ready/README.md": {
+      "sha256": "2e0fa22c240acfdf0c88951b95795cb7287130606bab9a4a244cd44712b8b7d1",
+      "bytes": 2070,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/dual-element-board-review.md": {
+      "sha256": "5668e5bc88d9b33a3a9a8f975621bf9335a9f1b281a6c765d319a2fc848cc642",
+      "bytes": 3628,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/falcon-mainnet-launch-checklist.md": {
+      "sha256": "7d091d54e238eb3d3d234fb723cb50ca34419fcc2fc8325182b7d434ff84686f",
+      "bytes": 8742,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/falcon-multisig-vault-architecture.md": {
+      "sha256": "1e30d858ed8089efb47175412fc4f5eccfd53e61eab32fb04ac540ad1fce1e7c",
+      "bytes": 14837,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/pq-multisig-falcon-status.md": {
+      "sha256": "c738e2801d6861c1493f76ade62fb8801dd68c0c557f3976c66a92cc592d4686",
+      "bytes": 3835,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/pq-multisig-mainnet-readiness-plan.md": {
+      "sha256": "b4b8d029af71083eb41e68b81f3c741ba2634aa785b3421b26df8cff3001dcae",
+      "bytes": 11160,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/pq-multisig-ops.aliases.example.json": {
+      "sha256": "4ca01db08df75efd26fc9ccf6fd231dc32b87182d4dcc085e464a1479c6e55b8",
+      "bytes": 772,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "docs/se050-falcon-development-workspace.md": {
+      "sha256": "81831138d8136820840128f5199fbe4ae13450145a5a593c77d9ce1097daeeae",
+      "bytes": 24472,
+      "origin": "original development documentation; literal PIN values replaced by <PIN> for public archival",
+      "original_sha256": "ef77a8fdd921c6d7350567a2456832ea477c55b3d7b68083c18237a4b93a2d22",
+      "original_bytes": 24474
+    },
+    "docs/vector-falcon-transaction-model.md": {
+      "sha256": "33f497f141a693a731899fa83e3ddf767a0aadb312ac2c9fa57f3316d028d3b6",
+      "bytes": 6813,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/Cargo.lock": {
+      "sha256": "0287c7900980236121ca863a2000be84ee2407b2a24d61cd46a4d08cb7534e86",
+      "bytes": 10480,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/Cargo.toml": {
+      "sha256": "60f0d5c3a0c4b239a50a40574c1750ea58486cce0f4d6bf27d7a0dd0138a1d99",
+      "bytes": 433,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/README.md": {
+      "sha256": "c9e014739326d1a190d6979e5f16b8bf6a0d10938abc0225b01c904006cec4ab",
+      "bytes": 8916,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/crates/core/Cargo.toml": {
+      "sha256": "0b0d26ed5054f5598be202294b688b5b87d1f9bdc2d9648939df69b7cc97362c",
+      "bytes": 339,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/crates/core/src/lib.rs": {
+      "sha256": "1983e9cc5cd6dd04e92a91eddac771ff9b7f1aded6440129e1db3aa8988544e7",
+      "bytes": 13918,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/program/Cargo.toml": {
+      "sha256": "fad1a5779e2d0cf10b474185c1f79c6e5cbfd2b145d030c4a91a3361b78113c7",
+      "bytes": 390,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/program/src/helpers.rs": {
+      "sha256": "33942c44df2884b280e9a06a3037044197550ac7adfe103a46da631bfb2acf18",
+      "bytes": 2558,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/program/src/instruction.rs": {
+      "sha256": "f7f50500e02a06d5a9ab21d5e6df7b3b49addcdd2be76b1fdd28d7dab20c92d9",
+      "bytes": 5507,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/program/src/lib.rs": {
+      "sha256": "ee091bc3f5e777d4f3511143ba91b020f14fc9e034e602702975fe6d9e8ba2d1",
+      "bytes": 2246,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/program/src/processor.rs": {
+      "sha256": "23fd1745ca56de2890e6a3fa8041a91c52608c58083c8296dd5bd7976b8d8629",
+      "bytes": 30453,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "pq-multisig-vault/program/src/state.rs": {
+      "sha256": "a17969b4def4b0cb2f1d61907b4a27cb18647a4696b75825cdbf7b9d64219559",
+      "bytes": 13105,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "rust-toolchain.toml": {
+      "sha256": "6cf0a2df390965b31e8fb2ef2a15cdf5811ddc7f6dfa50f8ba0f749a618cc1ca",
+      "bytes": 28,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/build_pq_multisig_vault_program.sh": {
+      "sha256": "b26dad1242ed1067a2695cc8d7512c69ae63fbb6c9fd1bcaff49f0401f03c475",
+      "bytes": 228,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/build_vector_falcon_program.sh": {
+      "sha256": "f54c18f71ac3237cf310b16c5b4c5ef81b999d7d53d961928b11cb9987ecad7b",
+      "bytes": 231,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/completions/_pq-multisig-ops": {
+      "sha256": "047169546794159f264d3eab6ac0c1ea32760370f23343bc2ec813eddd5471f0",
+      "bytes": 2815,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/completions/pq-multisig-ops.bash": {
+      "sha256": "03bd847f0e09a6825831e1455f5e7808d32ec538397631b686f5d6c86dffcbe9",
+      "bytes": 3108,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/deploy_pq_multisig_vault.sh": {
+      "sha256": "61df4355323e24cea52e87a935da5e0ed7df40f64bbe3edfb216c2f597f883b6",
+      "bytes": 3254,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/flash_and_hybrid_harness.sh": {
+      "sha256": "7f5aa4c9a5377fda46e1e993c4d3e739d3c87dc9a63381dd624827df16982656",
+      "bytes": 2657,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/flash_and_smoke_se050.sh": {
+      "sha256": "bb8b17ef85e55d53b5dbdedf8a89ae7e4c62b7f8f64f6b88a34f9a9e760db4b6",
+      "bytes": 2675,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/flash_se050_dev.sh": {
+      "sha256": "55d90d8d66e05e82488f66c3352b5717053716450ecd859a79e9e528ca9dac25",
+      "bytes": 4668,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/install_pq_multisig_ops_completions.sh": {
+      "sha256": "20579976c7eb42c95f0cb85e5cde68864f4ea1cf9026d3765450f3389ffc04ed",
+      "bytes": 615,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/reset_se050_blank.py": {
+      "sha256": "a2862058ba77d3d64151ff66ab51b6cecfa122e96d4cffcba8fdeada0ea91680",
+      "bytes": 2797,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_hybrid_harness.sh": {
+      "sha256": "9daadff66dca5288df2f17d45c4e1fa764240db757baab06c813ec5071130db1",
+      "bytes": 497,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_mainnet_falcon_e2e.sh": {
+      "sha256": "fa52dfb741361ce477d11f076ffce45eea6e83cb2bb89c9addee99af30e2b0a6",
+      "bytes": 4146,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_dashboard.sh": {
+      "sha256": "120201be496696c916ce100c21e93ca1b1166d5607d98cb3b1bd3790388c52f1",
+      "bytes": 739,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_localnet_harness.sh": {
+      "sha256": "57fd3ccf6b68dfe9c0992dc33c0b2d82c2f821faf1600ce1a8382d5586866e77",
+      "bytes": 878,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_ops.sh": {
+      "sha256": "9447af16a55bf30a6cb5108ed0ccf958b9669e6a6fcb06c50483707fca14ab75",
+      "bytes": 234,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_ops_localnet_e2e.sh": {
+      "sha256": "0c7c01ae6e735da01fb08a4b30db553187661964a2c054f687a594f494b9ed51",
+      "bytes": 14887,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_ops_localnet_hardware_e2e.sh": {
+      "sha256": "16bf53339f9d0d3fd162e352f955814dc867433e10dd6a445616bb0ad6d6a4df",
+      "bytes": 11228,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_ops_localnet_hardware_quickstart.sh": {
+      "sha256": "feca98eca618da7e01ee9dacf91617d07acb8fdecc8e979817fbddbd1990e344",
+      "bytes": 4161,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_ops_localnet_quickstart.sh": {
+      "sha256": "61f91918e11c989ffaa3d5cffff36f1db2f9815d99e9555f90cc2bf542cbe874",
+      "bytes": 3105,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_pq_multisig_ops_mainnet_hardware_canary.sh": {
+      "sha256": "098eb78ab2f775160841084ca52da1dfdf3766538691aaa71e8175eb8ea871f7",
+      "bytes": 13043,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_vector_device_harness.sh": {
+      "sha256": "79c727cbe3045604a0728bce3d33808bf8c3ce4682e8fb8fc9331e9e3c557faf",
+      "bytes": 527,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_vector_localnet_onchain_harness.sh": {
+      "sha256": "c992a957eb1fb4c1ac4db09844d2c9f9220397527c1225f883ce0428ba73f3bd",
+      "bytes": 399,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/run_vector_onchain_harness.sh": {
+      "sha256": "f2f26d61a8e4f7f5081a39b43cd941e788b28f3b455ba40d5e865df7961790b7",
+      "bytes": 529,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/start_pq_multisig_local_validator.sh": {
+      "sha256": "b433488a9f7ff6ffc0777b13025cede556a43ed97a9dd00d824e7b037994534c",
+      "bytes": 4008,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "scripts/start_vector_falcon_local_validator.sh": {
+      "sha256": "f8241833af2d2220b712318e23d6239d2569d940ef8431487d12d55fe192bc33",
+      "bytes": 2564,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "sdkconfig.defaults": {
+      "sha256": "d246a0317298c61100ae34c6465f5df9287ea61171cbd7808cdcc724b7401a4f",
+      "bytes": 752,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/.github/workflows/ci.yml": {
+      "sha256": "ab3ddcb65a4c52e38fd31f65b723034b7d31af9f9db5aef25fcf988d57471db9",
+      "bytes": 1271,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/.gitignore": {
+      "sha256": "cfd7e619cb2d2d80905f6b9323778a2d4f8937c6cea1a87282b615e37624f424",
+      "bytes": 104,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/Cargo.lock": {
+      "sha256": "a38fac65b844af455e7f2d37b24880a10dc19d3a684b198b31c0d4eaacd7fab8",
+      "bytes": 83445,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/Cargo.toml": {
+      "sha256": "b09fdc08438975268c89670697962e63b0086f28cf5228b6e5f4d6cc23a2685d",
+      "bytes": 1293,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/README.md": {
+      "sha256": "fd7efc70e54d1d71b43d253a80b47acdde776e22c59e046e4658a9f8a218332b",
+      "bytes": 14287,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/.gitignore": {
+      "sha256": "b3ad09fc93f83fdbd0bee771258dd4a58d3798fd7e6048611dde5a804bb43f1e",
+      "bytes": 7,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512.lean": {
+      "sha256": "57551b0370df31d5a573547be75d88a90c45afb6ba1a415f65aa9ffbd306f55e",
+      "bytes": 2227,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/Bounds.lean": {
+      "sha256": "fd218e6cd85fa8c7ad5cc9031c986debe551235e8e0db5b9c2d073675fa8d944",
+      "bytes": 7552,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/Canonicality.lean": {
+      "sha256": "a557ae793599b73c010f620f3cc03223744f1381dc386cab4fb3a091ca7a08b1",
+      "bytes": 24506,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/Defs.lean": {
+      "sha256": "16b610dcc4ade16e96ba2d77e9beb56c345ca36feb32bf566fd441d78afc6044",
+      "bytes": 5452,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/Fused.lean": {
+      "sha256": "b6e710316bac4cd5fa1ca167b3542e5b91113e6af5ebd1ff1592ba102725338c",
+      "bytes": 3669,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/HashToPoint.lean": {
+      "sha256": "fb16a256d149130441d7a9de9a31517480ffa97f99481fb23a69c2731d5caa99",
+      "bytes": 4125,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/NTT.lean": {
+      "sha256": "bcd56d74ae68f76538c1bff2a76d9aa326d965093820bfed923b3ebd7828f6bc",
+      "bytes": 3270,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/Norm.lean": {
+      "sha256": "61c19dfab5cb0f5e9a3cba2ebf83db265294631f7c7bb948a460a6181603d149",
+      "bytes": 6051,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/Falcon512/Refinement.lean": {
+      "sha256": "58d43a7f4a3bdfe8767c93e59b2908bb04fa9898cc230706c05bc97d1c66852d",
+      "bytes": 10066,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/lake-manifest.json": {
+      "sha256": "00b39d1776d80700a7580e3cb17280b58799bdbdf35dc66cf05e94a72405276f",
+      "bytes": 3108,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/lakefile.toml": {
+      "sha256": "4b4f98dd400fa5353d8638878b7b6109890e97f080543c7861c6d6d994593942",
+      "bytes": 204,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/formal_verification/lean-toolchain": {
+      "sha256": "aff3a276fcd1daa6f311e07baf168d5c0c89a3ddad4cd4e8de3e2ec779504e46",
+      "bytes": 25,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/Cargo.toml": {
+      "sha256": "ab4cce4b9c2e6941a00110b648d466f1bb208c25b9d547c3d1db1e82769d2ec0",
+      "bytes": 518,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/src/lib.rs": {
+      "sha256": "ae3e4282f62dd7211119b89d1bf971d50a30afd248a0e4dd24e34fc84d2836b7",
+      "bytes": 59,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/adversarial.rs": {
+      "sha256": "c2a9ab15541207045c375de808228a59e38a9f501566444fa1db9c7eaed73909",
+      "bytes": 12041,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/diff_pubkey_edges.rs": {
+      "sha256": "858d5cac094431c0ee9993ea1861fcf43efdbdd755d5df8ea1e2965e5495fe25",
+      "bytes": 9268,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/e2e.rs": {
+      "sha256": "505244bd310907bfcd4f5174c1d53d892f0b519aadfde73a821114d06e10bdb3",
+      "bytes": 5352,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/fixtures.rs": {
+      "sha256": "ab9d10b000d026d42a33c4e75d2a767d94daca20c2ff6d6c4838eaa1a174d23c",
+      "bytes": 1499,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/fuzz.rs": {
+      "sha256": "83dc13f99e03d02bfdb8ffaf8067e8f28a3b42d829460a5658131acb88bb1b86",
+      "bytes": 5025,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/pqclean_wire_format.rs": {
+      "sha256": "1aab79f2b065dc79099ef2e71757bd34b658b5e9d5e5d9f201a9eed41cafa161",
+      "bytes": 1761,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/host-tests/tests/soak.rs": {
+      "sha256": "8e80af2062d99b20efe25c9f6aa608eca5a66ec0f572af0adce6b34211a61ba8",
+      "bytes": 8378,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/adversarial_proptests.rs": {
+      "sha256": "abf309bbcc36cc9f82f60cbbf574452764da80877e3c890a7ba2b2af05d21f59",
+      "bytes": 10289,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/codec.rs": {
+      "sha256": "d3d860149b2ed6dd1abb6294c21dcf0dd1ebf80c77455e1d10f06d474915b1a2",
+      "bytes": 31830,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/kani_proofs.rs": {
+      "sha256": "5619e3ece1cb1513b0c4dd01c858bde084a49eaef9b90e778e6f5ddf97459799",
+      "bytes": 16735,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/keccak.rs": {
+      "sha256": "ec71527bb8fd0ddca6abc01f8ddff19f8a05287669445a6b9ac3db35b8887bc3",
+      "bytes": 11598,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/miri_unsafe_paths.rs": {
+      "sha256": "4a57f6d742e97e482660c9dd5c4f298d75bae9192b874eb5f7c6e4d8540d461f",
+      "bytes": 3090,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/ntt.rs": {
+      "sha256": "0872eb3feb84f734162e9b781d86cf559a8edd68b4d95abe14b1e9006d122849",
+      "bytes": 10097,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/internal-tests/spec_pins.rs": {
+      "sha256": "c5174188c5f9814c966795634b0df7665713bf9a22433b450ddd6273f644f179",
+      "bytes": 5177,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/.gitignore": {
+      "sha256": "bd326839f62a577e3e3b33089581b586fc3f4b8770f6ba5f1f8a491bdf36cd12",
+      "bytes": 17,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/Cargo.lock": {
+      "sha256": "aa15d1475a278ddcdd9031ea408387e41e1f9ba675b41a2940087d8d728553f8",
+      "bytes": 78553,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/Cargo.toml": {
+      "sha256": "1f80210a8978568c7490c312d20f860392f104a0e6f19eacf44d5318c4fcf78e",
+      "bytes": 373,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/src/lib.rs": {
+      "sha256": "d551bf88249f418cd7b82d910361d1cc22f6d88104b1014972744358835259c9",
+      "bytes": 2505,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/tests/fixtures/falcon.pk": {
+      "sha256": "b731e7f9ed43c11eb40c01080ac144922a7b7c52a0de6e21de3fa3fe96ba7ee1",
+      "bytes": 897,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/tests/fixtures/falcon.sk": {
+      "sha256": "79a7a8fa8c94c92cecd9e75365eb5c57b1d09255eb21e9dee1067ca0a2fc6e18",
+      "bytes": 1281,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/tests/fixtures/sample_sig.bin": {
+      "sha256": "54f842f453d8f50c83227924f03f1d22febe3a04358877a482d16790f0103d12",
+      "bytes": 666,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/program/tests/tests.rs": {
+      "sha256": "f79bf8c313f7477c30df2eb89a4db3f7c766994a567705719e71d263d6dd343e",
+      "bytes": 2638,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/proptest-regressions/ntt.txt": {
+      "sha256": "a6137bcb331b2daf39caf46a69fe4d37817b04dc78f664ab15985325add65daf",
+      "bytes": 893,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/src/codec.rs": {
+      "sha256": "1b566fd399b34519e1121e4704a732822af9239f08c3a672dc65e86a9ac8d9ba",
+      "bytes": 9171,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/src/keccak.rs": {
+      "sha256": "853909f1c88c3ca6bc8a4d3877bd18320f37c092c87f5ba76c44627cd1121c38",
+      "bytes": 10791,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/src/lib.rs": {
+      "sha256": "878d4ae87977922082087ca3cf92168e495aee6170c61f2a1f7af6478b368d4f",
+      "bytes": 27555,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "solana-falcon512/src/ntt.rs": {
+      "sha256": "e651c28487bec2186698e96990e7dfa8c2ac219360764a2ab1af25a2e9cc0d79",
+      "bytes": 30615,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/bin/display_smoke.rs": {
+      "sha256": "6cc66681b50f56c4787a08af2200f730d2433d1cd1d684fb4c8c3649141adc40",
+      "bytes": 5147,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/bin/peripheral_probe.rs": {
+      "sha256": "88227c96a316119f63f4944cbedb5cd001cb74a90f472f8ceead8680348f83b8",
+      "bytes": 14158,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/board.rs": {
+      "sha256": "9d3f134bdd4e702fa6651eaaa5d37f42cc417464e8c096efff8487b7c6f2b6f5",
+      "bytes": 7562,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/display.rs": {
+      "sha256": "215f7617e697cc7a95fd6644c14f9d0854534cdd8a1d939e21bc1301ee6510f5",
+      "bytes": 31059,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/falcon.rs": {
+      "sha256": "c565a42a84430b61fedbc211f7f64434e7c6fb06e710341906bb2d4c866d95c9",
+      "bytes": 4340,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/main.rs": {
+      "sha256": "bfc35677bb4be5b49bebf05a6f4406162ca9d2c4a882117075a6c070e0f99c96",
+      "bytes": 90681,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/se050.rs": {
+      "sha256": "eae062b76259af1cac9d4aa63168ea7d458b1c6e09b7c0f8e0e5708c16ca4d02",
+      "bytes": 17711,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "src/transaction_verify.rs": {
+      "sha256": "77323e966e9748fd57c1b50d9a8dabb01d0b55d784c60ee69fc8909dad70575e",
+      "bytes": 20624,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "test_firmware.py": {
+      "sha256": "63b52552cbd68dd0291e517d03f6cf37b29b7f4f4d8877366a0132ebd7866606",
+      "bytes": 8608,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/hybrid-harness/Cargo.lock": {
+      "sha256": "527d728717f77f13468f59bdc6ff4bd889b8bc1b82351dfad193a4afae6cf836",
+      "bytes": 16848,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/hybrid-harness/Cargo.toml": {
+      "sha256": "4c5d93a79e7ee658e50f78ec43ec788dff561369ae61a48b7f75bd1836d5c693",
+      "bytes": 316,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/hybrid-harness/src/main.rs": {
+      "sha256": "de7f3da2ef72db0722b0212d438b40c2c71d88449507806365f907ac5714a3fa",
+      "bytes": 25521,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-dashboard/server.py": {
+      "sha256": "5d78402eebcd0e885a6e6f7ea63470a190765c1811cd1f23ed3728cd231d239d",
+      "bytes": 6854,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-dashboard/static/app.js": {
+      "sha256": "cf57d3f07646539cce9187c31dd302bb7abe6e3e6ae96d9437680c2a48eaf61a",
+      "bytes": 9735,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-dashboard/static/index.html": {
+      "sha256": "36f059f5820adadf8ac269508a00787a5537c6e563654fd3c47c50c79773dd4c",
+      "bytes": 5622,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-dashboard/static/styles.css": {
+      "sha256": "181638158e810136bc0098d9e8f7c580ab441c3558d4f7da6b93b649dcbf99a3",
+      "bytes": 3815,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-harness/Cargo.lock": {
+      "sha256": "571884550e56fe77c2e21e2eb4987947a3f7b01303b7bc257a365fe59af49530",
+      "bytes": 101060,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-harness/Cargo.toml": {
+      "sha256": "3c62f87276df73e558d303ed1dc8b3972ccb08d5c63484356bd2fba35df79547",
+      "bytes": 954,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-harness/src/main.rs": {
+      "sha256": "b2a6d6fc8334ab1efe95c7fc54d88e6bea2adafa54c351a8930a13eafcedf06f",
+      "bytes": 86355,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-ops/Cargo.lock": {
+      "sha256": "15aa025e2be00d461adc7608bcd89856832cb25afa2d60598fc37ea6d9f3323f",
+      "bytes": 103589,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-ops/Cargo.toml": {
+      "sha256": "f8815ed374c4c327181f0a0fba6f1e8171094b2336f257c565b70911cbbc6749",
+      "bytes": 1151,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/pq-multisig-ops/src/main.rs": {
+      "sha256": "205988985aa46c5b56e87efa462185341be3d162f7031a99a5e3a77f4673b88d",
+      "bytes": 137854,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-device-harness/Cargo.lock": {
+      "sha256": "ec2ae31c312bee219242e1908cc0fa5269d2bf5e477ed889adede8577252db08",
+      "bytes": 24363,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-device-harness/Cargo.toml": {
+      "sha256": "8687f19502ee12f36d1960c3d7dcc6c08023c67d46d00b4b7295aa4a8f26d8c4",
+      "bytes": 432,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-device-harness/src/main.rs": {
+      "sha256": "398cd89c5b4881427ce5b5ec6d04b574f653db79eed6127ef6863479cab3651a",
+      "bytes": 26297,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-falcon-interop/Cargo.lock": {
+      "sha256": "d05a01f99215b2a075325406ffb0a4ddf1357ca3541b562b31d5ef30998312e2",
+      "bytes": 6233,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-falcon-interop/Cargo.toml": {
+      "sha256": "3466376cfa8e6b4263588890f010c6fa7acef0714f9972fa8e919437a6cb2dea",
+      "bytes": 396,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-falcon-interop/src/main.rs": {
+      "sha256": "ea0dc602f9d09d7a272f5626a5e08e1f57e306e42d5210eb2de4e6d21f9d627c",
+      "bytes": 5092,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-onchain-harness/Cargo.lock": {
+      "sha256": "898b2b75d3d7b6c4d6de10cb0be1cd8b0baba8f34d42b415b74eb35363a3f88c",
+      "bytes": 103665,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-onchain-harness/Cargo.toml": {
+      "sha256": "af5fed1fa3636c4fcae0ea452c5923a1d458909f3607b21e8f332d5629a6ffdd",
+      "bytes": 1433,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "tools/vector-onchain-harness/src/main.rs": {
+      "sha256": "ca5f930b725427a170ae9f5c7cf83602155e153f2e795000f614ad44704c98bb",
+      "bytes": 194306,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/.gitignore": {
+      "sha256": "bfa8001f259e3e4e42de42c129c5948c733f01bcc3f1ccf41d98150f297f96af",
+      "bytes": 48,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/Cargo.lock": {
+      "sha256": "b79d9270b231e94345d1fb694bdb59524ca3ad6c62c4272a9f8ef17ff5f012f4",
+      "bytes": 89814,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/Cargo.toml": {
+      "sha256": "93efcecb817ba6fc176a9ea33f159fbff031c848846bddfcbd7790fc59d23abf",
+      "bytes": 2010,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/LICENSE": {
+      "sha256": "3a04607d882d348dd5355c291dc4edc2066f6b6c5ff99ba84d8d8ceaaef3e5c5",
+      "bytes": 1078,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/Readme.md": {
+      "sha256": "3758bb4366fc29faaf031b2ba846699bb9825643e04004820672cded2eb9f2ce",
+      "bytes": 29938,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/assets/diagram.png": {
+      "sha256": "504f1bbb90215b079c4336c61715a5878cbe2dffbac3a7132164e0a0b6cca7c7",
+      "bytes": 727822,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/bun.lock": {
+      "sha256": "f693654e7e6f0f12aff6d39b3fedac8ab1f39899177525a2615112b46ca69531",
+      "bytes": 77806,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/Cargo.toml": {
+      "sha256": "077d58b7b62dae3dace70fe56f6af0677d54d59aab299d749cbeb44480dd4b8c",
+      "bytes": 778,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/buffer.rs": {
+      "sha256": "77e55135f6fe13cf44c28f6415fd3e6d71502567f2b87e9a6bd313cf737ce802",
+      "bytes": 3610,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/helpers.rs": {
+      "sha256": "b5c6ee49c0c835278266dd1cbaf0687e65efc9340ac0b5260cd9368090c66d9c",
+      "bytes": 837,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/instructions/advance.rs": {
+      "sha256": "721d0fc47de8880e2a4d45038cd0dea1071b455dd3396d4df62ecb641e137def",
+      "bytes": 2387,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/instructions/close.rs": {
+      "sha256": "ffda27fbd19cfd64277180b054b5670c444d305388f79ae98e292b768c27c14b",
+      "bytes": 1647,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/instructions/initialize.rs": {
+      "sha256": "072a0094c7fe39240456e33972671ab19c814619c9b5c6d7f5d86d76e92ae0f1",
+      "bytes": 5030,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/instructions/mod.rs": {
+      "sha256": "f20173bcaa235eee53a2114f1278c6016371e795333daa385bcc72fe98afec29",
+      "bytes": 2115,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/instructions/passthrough.rs": {
+      "sha256": "90bd263e331a2d524df22afc349636726fc2ea2e495688ee6587124fb0c2eabc",
+      "bytes": 8833,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/instructions/withdraw.rs": {
+      "sha256": "badb3f14f6c82b15e406a5f12573aff97a22b7729f951d6910fd592fdc023f92",
+      "bytes": 2301,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/lib.rs": {
+      "sha256": "fefb983d2710b4c95dfcfee34965d96d324ac0bccd6b466d5e5019feff457b69",
+      "bytes": 3236,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/scheme.rs": {
+      "sha256": "0be66ad90051074eb6345629bc088a46330d8d6633295b0fea58310831d7ba9a",
+      "bytes": 4134,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/common/src/state.rs": {
+      "sha256": "7d15fbf77a22f239c0d236c00497717d9c2ce27e67b9fa56a4e6889418d2e956",
+      "bytes": 5139,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/Cargo.toml": {
+      "sha256": "12260a63a7651f263599023e8e8c4eef3bc7fe7b8dc7d4fc9f7db3b8edd9c9b2",
+      "bytes": 496,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/digest.rs": {
+      "sha256": "f01e509dade92ef5f50ad7c71b4cb825d6c59a6fc4fdbc029974234ab8e0af49",
+      "bytes": 3675,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/instructions.rs": {
+      "sha256": "54f11e6f38f212e52689fc2687a3251e28e8578af076aa007f85a1cda2d2dcec",
+      "bytes": 6442,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/lib.rs": {
+      "sha256": "8f4246f736c9829d8ef78887baf2edc3d2139d6224b4b963e20185783d15a01a",
+      "bytes": 1817,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/scheme.rs": {
+      "sha256": "5bf54805d497b68f760d578df029c9831e51f74c9e02de2479fe60a8c8999b9d",
+      "bytes": 4158,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/schemes/ed25519.rs": {
+      "sha256": "dc2c8cc0895af61f2ddbf9270aa0d876fd84bb500f89d25bac642fb0416992b7",
+      "bytes": 1984,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/schemes/eip191.rs": {
+      "sha256": "458bf7192aab8768d818e949aac7b050e8b0f22dc387be2254848e8ad46c0e63",
+      "bytes": 3603,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/schemes/falcon512.rs": {
+      "sha256": "a8d61791853ed4cb10b574de452f73269eefcff4ed05941f7c5bb2202a789364",
+      "bytes": 2122,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/schemes/hawk512.rs": {
+      "sha256": "178bb94996ce85d67278243dc1a549b6198a9b8c55da0b8f9208d64b49b2476e",
+      "bytes": 5082,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/schemes/mod.rs": {
+      "sha256": "0d19881561e5fcec73cf1a1aeb84ed3c6a4cea5b0bd81df0c1981dfdadee61b5",
+      "bytes": 518,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/crates/core/src/schemes/secp256k1.rs": {
+      "sha256": "df1df7d89ce3fa8d473e8d89f24275b3bfd6b06268ee49613bde71e48a627e01",
+      "bytes": 2521,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/fixtures/rent.json": {
+      "sha256": "2ec1de73e79a6eeff443cb31d8393de26a1b9f496b348e7b3beb2c84a611ed22",
+      "bytes": 281,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/package.json": {
+      "sha256": "9addc8e9e82f1eecb96c24a0e25caf34535e12db90bc65921fecd9466d858a4a",
+      "bytes": 2415,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/ed25519/Cargo.toml": {
+      "sha256": "09e53f48867f42daf8f462458a3b7a3f4f3b8c9d86e0de684807d3039ef56347",
+      "bytes": 429,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/ed25519/src/lib.rs": {
+      "sha256": "897d914e9da520cc2814cdb6d278b4e254bf66ff51da774e041453d3cd2790e6",
+      "bytes": 761,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/ed25519/src/scheme.rs": {
+      "sha256": "63d4bcd275410bf7e81ae723f244103c0c1cf192187452e7c880b53df9b12d0f",
+      "bytes": 1538,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/eip191/Cargo.toml": {
+      "sha256": "b8ba9cc14429116a5f07983e3a488aca2e0befa755d76504397c7ee96656ef7c",
+      "bytes": 434,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/eip191/src/lib.rs": {
+      "sha256": "9752587e20e35af31729a6f1f2998076e921e31d7b75426dcb91b0e82c0a7a40",
+      "bytes": 860,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/eip191/src/scheme.rs": {
+      "sha256": "a4d767f301ffae381e578596882f2d826165121db002110cbf960586648c3032",
+      "bytes": 3081,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/falcon512/Cargo.toml": {
+      "sha256": "7f6fbaa2d75605fcdd09e0ac07cf941ce7b13e4dc784b17b7bcf1abe870ea9fa",
+      "bytes": 468,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/falcon512/src/lib.rs": {
+      "sha256": "bdf095899e1afe4d373fa05e6db2230f64f96c8d276cebabc2b41bad248b0cc2",
+      "bytes": 867,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/falcon512/src/scheme.rs": {
+      "sha256": "2183a2c78465924b1cce0c818e438513b34ea23cf71e06b0420050b790cb5b56",
+      "bytes": 4383,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/hawk512/Cargo.toml": {
+      "sha256": "43a8b841edef3fca8664f06c9e5501b5eb4303dc13911d65fcf4a5d7f8b2e64a",
+      "bytes": 482,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/hawk512/src/lib.rs": {
+      "sha256": "fd1184581f85222e48578d34febf21464435c9aa23cf36c60f8d6247c39eef4b",
+      "bytes": 2827,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/hawk512/src/scheme.rs": {
+      "sha256": "4adadbe5f459897884c95ac9dc5cad612a33e1aa2433c904f142aa1aa787e88c",
+      "bytes": 10190,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/secp256k1/Cargo.toml": {
+      "sha256": "0a2ce02ccdbaceba2e242c471ccee5473f123f7b28f0e56934ca8bc94e80709b",
+      "bytes": 467,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/secp256k1/src/lib.rs": {
+      "sha256": "539589d8bd65f0c6005cb50180135419db41949c9a5cd053e0cc5d2be758f028",
+      "bytes": 826,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/programs/secp256k1/src/scheme.rs": {
+      "sha256": "9b4ed53c5a117963b666a06fd7297bc6efcbf00accc4d79e0c78b1071bc15845",
+      "bytes": 2192,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/digest.ts": {
+      "sha256": "b792d28856abf2a8fc031eb4f6eee1cbc883f4ae674366f893aabd6354357bb3",
+      "bytes": 4259,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/index.ts": {
+      "sha256": "083ee877f267f75c1c41d69d40d928ec0f4e9534599302751dc8149db9911f32",
+      "bytes": 2806,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/instructions.ts": {
+      "sha256": "8b64acd67756639dec900a35e0982451ef75559f15549b14bf3eb0ad65e8e2c5",
+      "bytes": 8824,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/scheme.ts": {
+      "sha256": "edddffb4ba7587323bf2aeef8c94988c52bdfe6bcccc5b19aaf124364b49e561",
+      "bytes": 7313,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/schemes/ed25519.ts": {
+      "sha256": "f57b188ef730ae6b9095beb207e0e44356e6021ecf8a78a39a5603f9bee26002",
+      "bytes": 1888,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/schemes/eip191.ts": {
+      "sha256": "814853cb064e4d4b007fc38292cd94dd08f7878dc819edc370d2131823e85e0a",
+      "bytes": 3029,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/schemes/falcon512.ts": {
+      "sha256": "38aca88f74bd680258981864e01c343f6430836a777dae4e98adfcee0ba22594",
+      "bytes": 4261,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/schemes/hawk512.ts": {
+      "sha256": "6c9bdf920611e5c6eb3d764f008ce1c09691b80638d1072daaee04999537938b",
+      "bytes": 7368,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/src/schemes/secp256k1.ts": {
+      "sha256": "830e840fb5781c5580a67b3974f75200fcb9cb24afdac4599e3d436d5969cd60",
+      "bytes": 2678,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/test/ed25519.test.ts": {
+      "sha256": "ea3768d7a43dcd451a4f7bd3302393729402133c071ff34b5b7595cb4cacaed5",
+      "bytes": 4424,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/test/eip191.test.ts": {
+      "sha256": "3fba32b6c16893d549914db70840d5014b99ba226a700a1d245ef0a147ba7400",
+      "bytes": 5017,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/test/falcon512.test.ts": {
+      "sha256": "99600332711626b89a1aa8ca3d24e989cfc2197c7b1a54102caf9d996c38b302",
+      "bytes": 5639,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/test/hawk512.test.ts": {
+      "sha256": "a8da88b44fb9b28e363c02e1de99adecd1774fecdd9a216b9a63321b485aca9b",
+      "bytes": 8464,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/test/helpers.ts": {
+      "sha256": "7c62e476a5ff59c9c13e87134128bc56a22611ee777f8a7028bf82fee17ad889",
+      "bytes": 7890,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/sdk/ts/test/secp256k1.test.ts": {
+      "sha256": "b63574bc919d9355eb6942f6699e697fa1679006bc0eef6ea7e1aeea4f1b89ef",
+      "bytes": 5115,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/Cargo.toml": {
+      "sha256": "28084eea8c022ddf1250c76c1b4fd5a5f7698e98503f79566bab896537c556f4",
+      "bytes": 822,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/common.rs": {
+      "sha256": "bbacd2fdd7868b219656fbf48a31326f2786657ad2da78d04513a5a7f25034e6",
+      "bytes": 7776,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/ed25519.rs": {
+      "sha256": "d333040b1aa4df6e2a0f30356a78c70be741c63f4ccc0263dbe64c557953a374",
+      "bytes": 6408,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/eip191.rs": {
+      "sha256": "2f61f5b02699b86508a8ae5aee38d461c0cccc828afcf6136e948c762f4564c9",
+      "bytes": 6356,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/falcon512.rs": {
+      "sha256": "0eda915874a27e47a38bc182fe66b210be81d6a93cf9fe49efbe2c93646ebb75",
+      "bytes": 9021,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/fixtures/hawk512_pk.bin": {
+      "sha256": "30e248112a3e7eed5e919fe49daa7d4d228a83457a26638236ff01d006a6534e",
+      "bytes": 1024,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/hawk512.rs": {
+      "sha256": "5bfb2ff62e7f65df76c7b8c34f4fb04bf1362bcc9dde4ade37d829d8a5017e3b",
+      "bytes": 16548,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/lib.rs": {
+      "sha256": "b9a00e985c9b51d43c154201267116599c41e353f4f59b0d7b370dc294f0797f",
+      "bytes": 297,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tests/secp256k1.rs": {
+      "sha256": "e4a018ae8bfedb424772a3bc2f7efe02f693d0d5a24ea84b81c504948339c0c4",
+      "bytes": 6498,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/tsconfig.json": {
+      "sha256": "69c7fc13d774a59abe632e72cc8589401992f81583378b2e95eed3748596a555",
+      "bytes": 346,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vector/vitest.config.ts": {
+      "sha256": "82e8fa02c3f02f1f48e7bc0b24eb2d45ee75bfc4419d924990e57196134797c5",
+      "bytes": 690,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/.cargo-ok": {
+      "sha256": "afbf9d0f3560b0fd7795e81c42a0a79ee6b6fc67e064f77826aee642cad28d91",
+      "bytes": 7,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/.cargo_vcs_info.json": {
+      "sha256": "39b25ba80363b216c8ed3a73fd35fc7e1cd58b22522304344dbfa2b8c7225b96",
+      "bytes": 94,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/.github/workflows/rust.yml": {
+      "sha256": "894e6a1112b6876ad64af3e906818e8d55a6b11e73bd4a1755ec20a9aac6d06d",
+      "bytes": 289,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/.gitignore": {
+      "sha256": "706b35f8f9d5535091150bd6f0f2f09a67663872c6458afc0cc1b2e88ed6f01c",
+      "bytes": 44,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/Cargo.toml": {
+      "sha256": "4c4b7c022ab923a8820ece4aba511939a862e4305e0804fa71e6540c5a49f079",
+      "bytes": 1017,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/Cargo.toml.orig": {
+      "sha256": "94a0dde25fe74e029a81be1ce2be5b301cab442d01bc209569b2ca340fdffa83",
+      "bytes": 518,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/LICENSE": {
+      "sha256": "2413f1809e287ef4638287bb7dc70ee63f12b7965011fe2515b174b86e47ce72",
+      "bytes": 1078,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/README.md": {
+      "sha256": "9a62d676fe825bead77add5a25b821ad772428dc5e187a4c63889b017d2e3fea",
+      "bytes": 327,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/src/instruction.rs": {
+      "sha256": "9df5119ac6402bb5bf6c8e5f45f6153fad455e40b889e40fe6367c32eaa7eeba",
+      "bytes": 773,
+      "origin": "original development working tree; copied unchanged"
+    },
+    "vendor/st7735-lcd/src/lib.rs": {
+      "sha256": "a0253bfb67f17bc1dc9c2bc7f16f750b2b6b48a95a793f7a908637275937f6d5",
+      "bytes": 9768,
+      "origin": "original development working tree; copied unchanged"
+    }
+  },
+  "exclusions": [
+    "Operator wallet/program keypair JSON files",
+    "Full checkpoint payloads and raw device logs",
+    "Private device backups and manufacturing records",
+    "Generated target/.embuild/node_modules caches",
+    "Unrelated DM32/STM32/FPGA/Tropic experiment trees"
+  ],
+  "public_upstream_fixture_note": "The solana-falcon512 sample .sk fixture is identical to its already-public upstream commit; no operator private keys are included.",
+  "documentation_redactions": {
+    "literal_pin_occurrences": 38,
+    "files": [
+      "buildnflash.md",
+      "checkpoint/2026-06-07-hybrid-hello-ok/README.md",
+      "checkpoint/2026-06-07-hybrid-hello-ok/buildnflash.md",
+      "checkpoint/2026-06-07-vector-device-harness-ok/README.md",
+      "checkpoint/2026-06-07-vector-device-harness-ok/buildnflash.md",
+      "checkpoint/2026-06-07-vector-localnet-e2e/README.md",
+      "checkpoint/2026-06-07-vector-localnet-spl-transfer-ok/README.md",
+      "checkpoint/2026-06-07-vector-localnet-stake-ok/README.md",
+      "checkpoint/2026-06-07-vector-localnet-withdraw-ok/README.md",
+      "checkpoint/2026-06-07-vector-onchain-harness/README.md",
+      "checkpoint/2026-06-07-vector-onchain-harness/buildnflash.md",
+      "checkpoint/2026-06-12-unruggable-v2-se050-bringup-ok/README.md",
+      "checkpoint/2026-06-13-unruggable-v2-button-confirm-ok/README.md",
+      "docs/se050-falcon-development-workspace.md"
+    ],
+    "original_notes_retained_locally": true,
+    "runtime_source_changed": false
+  }
+}

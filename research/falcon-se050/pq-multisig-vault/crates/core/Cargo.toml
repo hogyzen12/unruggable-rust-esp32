@@ -1,0 +1,11 @@
+[package]
+name = "pq-multisig-vault-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Client-side helpers for the Falcon-gated PQ multisig vault"
+
+[dependencies]
+solana-address = { workspace = true, features = ["curve25519", "decode"] }
+solana-instruction = { workspace = true }
+sha2 = "0.10"

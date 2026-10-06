@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  fmt:
+    name: rustfmt (nightly)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rustfmt
+      - name: cargo +nightly fmt --check (lib)
+        run: cargo +nightly fmt --check
+      - name: cargo +nightly fmt --check (program)
+        working-directory: program
+        run: cargo +nightly fmt --check
+
+  clippy:
+    name: clippy (nightly)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: cargo +nightly clippy (lib)
+        run: cargo +nightly clippy --all-targets -- -D warnings
+      - name: cargo +nightly clippy (program)
+        working-directory: program
+        run: cargo +nightly clippy --all-targets -- -D warnings
+
+  kani:
+    name: kani (formal verification)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: model-checking/kani-github-action@v1
